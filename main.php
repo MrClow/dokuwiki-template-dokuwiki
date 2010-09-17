@@ -33,7 +33,7 @@ if (!defined('DOKU_INC')) die(); /* must be run from within DokuWiki */
         <!-- HEADER -->
         <div id="dokuwiki__header"><div class="pad">
 
-            <h1><?php tpl_link(wl(),$conf['title'],'id="dokuwiki__top" accesskey="h" title="[H]"') ?></h1>
+            <h1 id="dokuwiki__top"><?php tpl_link(wl(),$conf['title'],'id="dokuwiki__top" accesskey="h" title="[H]"') ?></h1>
             <h2>[[<?php tpl_pagetitle($ID) ?>]]</h2>
 
             <?php /* TODO: skip links
@@ -46,23 +46,27 @@ if (!defined('DOKU_INC')) die(); /* must be run from within DokuWiki */
             */ ?>
 
             <!-- AUTH ACTIONS -->
-            <h3 class="a11y">User Tools</h3> <?php//TODO: localize ?>
-            <ul id="dokuwiki__usertools">
+            <div id="dokuwiki__usertools">
+                <h3 class="a11y">User Tools</h3> <?php//TODO: localize ?>
+                <ul>
                 <?php
                      tpl_action('admin',1,'li');
                      tpl_action('profile',1,'li',false,'','',$INFO['userinfo']['name']);
                      tpl_action('login',1,'li');
                 ?>
-            </ul>
+                </ul>
+            </div>
 
             <!-- SITE ACTIONS -->
-            <h3 class="a11y">Site Tools</h3> <?php//TODO: localize ?>
             <div id="dokuwiki__sitetools">
-                <?php
-                     tpl_action('index');
-                     tpl_action('recent');
-                     tpl_searchform();
-                ?>
+                <h3 class="a11y">Site Tools</h3> <?php//TODO: localize ?>
+                <?php tpl_searchform(); ?>
+                <ul>
+                    <?php
+                         tpl_action('recent',1,'li');
+                         tpl_action('index',1,'li');
+                    ?>
+                </ul>
             </div>
 
             <?php @include(dirname(__FILE__).'/header.html') /* include hook */ ?>
@@ -88,17 +92,6 @@ if (!defined('DOKU_INC')) die(); /* must be run from within DokuWiki */
                 <div id="dokuwiki__controls"><div class="pad">
                     <h3 class="a11y">Page Controls</h3>
 
-                    <!-- PAGE ACTIONS -->
-                    <div id="dokuwiki__pagetools">
-                        <?php
-                            // the optional second parameter of tpl_action() switches between a link and a button,
-                            // e.g. a link inside a <li> would be: tpl_action('edit',1,'li')
-                        ?>
-                        <?php tpl_action('edit')?>
-                        <?php tpl_action('history')?>
-                        <?php tpl_action('backlink')?>
-                            <?php tpl_action('subscribe')?>
-                    </div>
 
 
                     <div class="clearer"></div>
@@ -126,6 +119,21 @@ if (!defined('DOKU_INC')) die(); /* must be run from within DokuWiki */
 
             <div class="clearer"></div>
             <hr class="a11y" />
+
+            <!-- PAGE ACTIONS -->
+            <div id="dokuwiki__pagetools">
+                <h3 class="a11y">Page Tools</h3> <?php//TODO: localize ?>
+                <ul>
+                    <?php
+                        tpl_action('edit',1,'li');
+                        tpl_action('history',1,'li');
+                        tpl_action('backlink',1,'li');
+                        tpl_action('subscribe',1,'li');
+                        tpl_action('top',1,'li');
+                    ?>
+                </ul>
+            </div>
+
         </div><!-- /wrapper -->
 
 
