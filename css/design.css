@@ -1,0 +1,204 @@
+
+/* header
+********************************************************************/
+#dokuwiki__header {
+}
+#dokuwiki__header h1 {
+    float: left;
+    clear: none;
+}
+#dokuwiki__header p.claim {
+    float: left;
+    padding-left: 10px;
+}
+#dokuwiki__header h2 {
+    float: right;
+    clear: none;
+}
+#dokuwiki__header form.search {
+    float: right;
+}
+#dokuwiki__header div.breadcrumbs {
+}
+
+
+/* --------------------------------------------------
+
+
+div.dokuwiki div.breadcrumbs {
+  background-color: __background_neu__;
+  color: __text_neu__;
+  font-size: 80%;
+  padding: 0 0 0 4px;
+}
+
+div.dokuwiki span.user {
+  color: __text_other__;
+  font-size: 90%;
+}
+
+*/
+
+/* nav
+********************************************************************/
+
+
+/* content
+********************************************************************/
+
+/*____________ section indenting ____________*/
+.dokuwiki h1 {margin-left: 0;}
+.dokuwiki h2 {margin-left: 20px;}
+.dokuwiki h3 {margin-left: 40px;}
+.dokuwiki h4 {margin-left: 60px;}
+.dokuwiki h5 {margin-left: 80px;}
+.dokuwiki div.level1 {margin-left: 0;}
+.dokuwiki div.level2 {margin-left: 20px;}
+.dokuwiki div.level3 {margin-left: 40px;}
+.dokuwiki div.level4 {margin-left: 60px;}
+.dokuwiki div.level5 {margin-left: 80px;}
+
+
+/*____________ tables ____________*/
+
+table.inline {
+/*
+    width: 100%;
+    background-color: #eee;
+    border: 1px solid #ccc;
+*/
+    min-width: 50%;
+}
+table.inline th,
+table.inline td {
+    border: 1px solid #999;
+}
+table.inline th {
+    color: #333;
+    background-color: #ddd;
+}
+table.inline td {
+}
+table.inline tr:hover td {
+    background-color: #eee;
+}
+table.inline tr:hover th {
+    background-color: #ccc;
+}
+
+
+/*____________ code ____________*/
+pre, tt, code, samp, kbd {
+    background-color: #eee;
+    color: inherit;
+}
+pre {
+    border: 1px solid #ccc;
+}
+/*
+  code blocks by code tag
+div.dokuwiki pre.code {
+  background-color: __background_other__;
+}
+  code blocks by file tag
+div.dokuwiki pre.file {
+  background-color: __background_alt__;
+}
+
+*/
+
+/*____________ blockquote ____________
+blockquote {
+    padding-left: 0.7em;
+    padding-right: 0.7em;
+    margin-left: 0.7em;
+    margin-right: 0.7em;
+    font-style: italic;
+    border-left: 0.7em solid #ddd;
+    border-right: 0.7em solid #ddd;
+}
+
+
+div.dokuwiki blockquote {
+  border-left: 2px solid __border__;
+  padding-left: 3px;
+}
+
+*/
+/*____________ forms ____________*/
+/*
+input.button,
+button {
+    border-top: 1px solid #ccc;
+    border-right: 1px solid #666;
+    border-bottom: 1px solid #666;
+    border-left: 1px solid #ccc;
+}
+input.button:hover,
+input.button:focus,
+button:hover,
+button:focus {
+    border-top: 1px solid #666;
+    border-right: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    border-left: 1px solid #666;
+}
+
+
+input.text,
+textarea,
+select {
+    border: 1px solid #666;
+}
+input:focus,
+textarea:focus,
+select:focus {
+    background-color: #eee;
+}
+input.button:focus,
+button:focus,
+a.button:focus {
+    background-color: #666;
+}
+
+option {
+}
+label {
+    display: block;
+}
+input.text {
+}
+input.checkbox {
+}
+label.checkbox {
+    display: inline;
+}
+input.button,
+button {
+    color: #fff !important;
+    background-color: #999;
+    padding: 0.2em 0.4em;
+    font-weight: bold;
+}
+ */
+
+
+div.license {
+    font-size: 90%;
+}
+
+
+/* footer
+********************************************************************/
+
+#dokuwiki__footer .doc {
+    float: left;
+}
+#dokuwiki__footer .top {
+    float: right;
+}
+#dokuwiki__footer .license {
+    clear: both;
+}
+
+

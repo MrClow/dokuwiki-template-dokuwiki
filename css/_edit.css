@@ -1,0 +1,103 @@
+/**************************************************
+This file provides styles for the edit view
+(?do=edit) and preview.
+**************************************************/
+
+/*____________ toolbar ____________*/
+
+.dokuwiki div.toolbar {
+    margin-bottom: .5em;
+}
+.dokuwiki div.toolbar #draft__status {
+    float: right;
+    color: __text_alt__;
+    background-color: inherit;
+}
+.dokuwiki div.toolbar #tool__bar {
+}
+
+/* TODO: no .dokuwiki */
+button.toolbutton {
+}
+div.picker {
+    width: 300px;
+    border: 1px solid __border__;
+    background-color: __background_alt__;
+}
+div.pk_hl {
+    width: auto;
+}
+button.pickerbutton {
+/*
+    background-color: transparent;
+    font-size: 80%;
+*/
+}
+
+/*____________ edit area ____________*/
+
+textarea.edit {
+    width: 100%;
+/* TODO: alternative fonts */
+    font-family: monospace;
+/* TODO: colours needed? */
+    color: __text__;
+    background-color: __background__;
+}
+
+#wiki__editbar {
+    overflow: hidden;
+    margin: .5em 0;
+}
+#wiki__editbar #size__ctl {
+    float: right;
+/*
+    width: 60px;
+    height: 2.7em;
+*/
+}
+#size__ctl img {
+    cursor: pointer;
+}
+#wiki__editbar .editButtons {
+    display: inline;
+    margin-right :1em;
+/*
+    padding: 0 1.0em 0.7em 0;
+*/
+}
+#wiki__editbar .editButtons input {
+}
+#wiki__editbar .summary {
+    display: inline;
+}
+#wiki__editbar .summary label {
+    vertical-align: middle;
+    white-space: nowrap;
+}
+#wiki__editbar .summary input {
+}
+#wiki__editbar .summary input.missing {
+    color: __text__;
+    background-color: #ffcccc;
+}
+
+/*____________ preview ____________*/
+
+div.dokuwiki div.preview {
+    background-color: __background_neu__;
+    color: __text__;
+    margin: 0 0 0 2em;
+    padding: .5em;
+    border: 1px dashed __text__;
+}
+
+/*____________ section edit ____________*/
+
+.secedit {
+    float: right;
+}
+.section_highlight {
+    background-color: __background_alt__;
+}
+

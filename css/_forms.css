@@ -1,0 +1,90 @@
+/* ---------------- forms ------------------------ */
+
+div.dokuwiki form {
+  border: none;
+  display: inline;
+}
+
+div.dokuwiki label.block {
+  display: block;
+  text-align: right;
+  font-weight: bold;
+}
+
+div.dokuwiki label.simple {
+  display: block;
+  text-align: left;
+  font-weight: normal;
+}
+
+div.dokuwiki label.block input.edit {
+  width: 50%;
+}
+
+div.dokuwiki fieldset {
+  width: 300px;
+  text-align: center;
+  border: 1px solid __border__;
+  padding: 0.5em;
+  margin: auto;
+}
+
+
+div.dokuwiki input.edit,
+div.dokuwiki select.edit {
+  font-size: 100%;
+  border: 1px solid __border__;
+  color: __text__;
+  background-color: __background__;
+  vertical-align: middle;
+  margin: 1px;
+  padding: 0.20em 0.3em;
+  display: inline;
+}
+div.dokuwiki select.edit {
+  padding: 0.1em 0;
+}
+
+
+/* nice alphatransparency background except for IE <7 */
+html>body div.dokuwiki input.edit,
+html>body div.dokuwiki select.edit {
+  background:  __background__ url(images/inputshadow.png) repeat-x top;
+}
+/* nice alphatransparency background except for IE <7 */
+html>body div.dokuwiki textarea.edit {
+  background:  __background__ url(images/inputshadow.png) repeat-x top;
+}
+
+/* disabled style - not understood by IE */
+div.dokuwiki textarea.edit[disabled],
+div.dokuwiki textarea.edit[readonly],
+div.dokuwiki input.edit[disabled],
+div.dokuwiki input.edit[readonly],
+div.dokuwiki select.edit[disabled] {
+  background-color: __background_neu__!important;
+  color: __text_neu__!important;
+}
+
+
+/* --------- buttons ------------------- */
+
+div.dokuwiki input.button,
+div.dokuwiki button.button {
+  vertical-align: middle;
+  text-decoration: none;
+  margin: 1px;
+}
+
+/* nice alphatransparency background except for IE <7 */
+html>body div.dokuwiki input.button,
+html>body div.dokuwiki button.button {
+  background: __background__ url(images/buttonshadow.png) repeat-x bottom;
+}
+
+* html div.dokuwiki input.button,
+* html div.dokuwiki button.button {
+  height: 1.8em;
+}
+
+

@@ -1,0 +1,131 @@
+
+/* search results page
+********************************************************************/
+
+/*____________ matching pagenames ____________*/
+
+div.search_quickresult {
+    /* margin-left */
+    margin-bottom: 1em;
+    padding-bottom: 1em;
+    border-bottom: 1px solid __border__;/* dashed */
+}
+div.search_quickresult h3 {
+}
+ul.search_quickhits {
+    margin: 0;
+    padding: 0.5em 0;
+}
+ul.search_quickhits li {
+    display: inline;
+    padding-right: 2.0em;
+}
+/* ???
+div.search_quickresult div.clearer {
+    display: none !important;
+    clear: none !important;
+}
+
+
+div.dokuwiki ul.search_quickhits {
+  margin: 0 0 0.5em 1.0em;
+}
+
+div.dokuwiki ul.search_quickhits li {
+  margin: 0 1.0em;
+  float:left;
+  width: 30%;
+}
+*/
+
+
+/*____________ search results ____________*/
+
+div.search_result {
+    margin: 0;
+    padding: 0 0 1.0em 0;
+    font-size: 0.8em;
+}
+span.search_cnt {
+}
+div.search_snippet {
+    margin: 0 0 0 1.0em;
+    padding: 0;
+    color: __text_neu__;
+    background-color: inherit;
+}
+.search_hit{
+    color: __text__;
+    background-color: __background_neu__;
+}
+strong.search_hit{
+  font-weight: normal;
+}
+/* ???
+span.search_sep {
+    color: #000;
+    background-color: inherit;
+}
+*/
+
+/*--> "nothing found" at search + **media** */
+div.nothing {
+    text-align:center;
+    font-size: 0.8em;
+}
+
+/* AJAX quicksearch */
+div.ajax_qsearch {
+    position: absolute;
+    padding: 0.5em;
+width: 200px;
+    width: 175px;
+    line-height: 1.2;
+    background-color: __background_neu__;
+    color: __text__;
+    border: 1px solid __border__;
+    display: none;
+    font-size: 0.8em;
+/*
+  opacity: 0.9;
+right: 237px;
+*/
+    z-index: 50;
+}
+
+
+
+/* search results
+********************************************************************/
+
+div.dokuwiki .search_result {
+  margin-bottom: 6px;
+  padding: 0 10px 0 30px;
+}
+
+div.dokuwiki .search_snippet {
+  color: __text_other__;
+  font-size: 12px;
+  margin-left: 20px;
+}
+
+div.dokuwiki .search_sep {
+  color: __text__;
+}
+
+div.dokuwiki .search_hit {
+  color: __text__;
+  background-color: __highlight__;
+}
+div.dokuwiki strong.search_hit {
+  font-weight: normal;
+}
+
+
+/*
+div.dokuwiki div.nothing {
+  text-align: center;
+  margin: 2em;
+}
+
+*/

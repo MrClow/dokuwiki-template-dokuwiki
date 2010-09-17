@@ -1,0 +1,15 @@
+
+/* footer.html 
+********************************************************************/
+
+div.footerinc {
+    text-align: center;
+}
+.footerinc a img {
+    opacity: 0.5;
+    border: 0;
+}
+
+.footerinc a:hover img {
+    opacity: 1;
+}

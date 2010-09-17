@@ -1,0 +1,82 @@
+/* toc (table of contents)
+********************************************************************/
+
+/* toc container */
+.dokuwiki div.toc {
+    float: right;
+    margin: 0 0 1.5em 1.5em;
+    width: 200px;
+}
+
+/*____________ toc header ____________*/
+
+.dokuwiki div.tocheader {
+    padding: 0.2em 0.3em;
+    margin-bottom: .2em;
+    font-weight: bold;
+    background-color: __background_alt__;
+    color: __text__;
+}
+
+/* css arrow */
+.dokuwiki .toc span.toc_open,
+.dokuwiki .toc span.toc_close {
+    border: .4em solid __background_alt__;
+    float: right;
+    display: block;
+    margin: 0 .2em 0 0;
+}
+.dokuwiki .toc span.toc_open span,
+.dokuwiki .toc span.toc_close span {
+    display: none;
+}
+.dokuwiki .toc span.toc_open {
+    margin-top: .4em;
+    border-top: .4em solid __text__;
+}
+.dokuwiki .toc span.toc_close {
+    margin-top: 0;
+    border-bottom: .4em solid __text__;
+}
+
+/*____________ toc list ____________*/
+
+.dokuwiki #toc__inside {
+    padding: .3em;
+/*
+    border: 1px solid __border__;
+*/
+    background-color: __background_alt__;
+    color: __text__;
+}
+.dokuwiki ul.toc {
+    padding-left: 0;
+    margin-bottom: 0;
+}
+.dokuwiki ul.toc li {
+    list-style: none;
+}
+.dokuwiki ul.toc ul {
+    padding-left: 1em;
+}
+.dokuwiki ul.toc li li {
+}
+/* TODO: ???
+.dokuwiki ul.toc li.clear {
+    background-image: none;
+    padding-left:0.4em;
+}
+*/
+
+.dokuwiki a.toc {
+}
+
+
+/* index (?do=index)
+********************************************************************/
+
+/* TODO: changes images */
+.dokuwiki ul.idx li {list-style-image: url(images/bullet.gif);}
+.dokuwiki ul.idx li.open {list-style-image: url(images/open.gif);}
+.dokuwiki ul.idx li.closed {list-style-image: url(images/closed.gif);}
+

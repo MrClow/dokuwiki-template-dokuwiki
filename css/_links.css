@@ -1,0 +1,46 @@
+/**************************************************
+This file provides styles for all types of links.
+**************************************************/
+
+/*____________ links to wiki pages ____________*/
+
+/* existing wikipage */
+.dokuwiki a.wikilink1 {
+    color: __existing__;
+    background-color: inherit;
+}
+/* not existing wikipage */
+.dokuwiki a.wikilink2 {
+    color: __missing__;
+    background-color: inherit;
+    text-decoration: none !important;
+    border-bottom: dashed 1px __missing__ !important;
+}
+
+/*____________ other link types ____________*/
+
+.dokuwiki a.urlextern,
+.dokuwiki a.windows,
+.dokuwiki a.mail {
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    padding-left: 17px;
+}
+/* external link */
+.dokuwiki a.urlextern {
+    background-image: url(images/link_icon.gif);
+}
+/* windows share */
+.dokuwiki a.windows {
+    background-image: url(images/windows.gif);
+}
+/* email link */
+.dokuwiki a.mail {
+    background-image: url(images/mail_icon.gif);
+}
+/* link to some embedded media (icons are set by dokuwiki) */
+.dokuwiki a.media {
+}
+/* interwiki link (icons are set by dokuwiki) */
+.dokuwiki a.interwiki {
+}

@@ -1,0 +1,45 @@
+/**************************************************
+This file provides styles for the recent changes
+(?do=recent) and old revisions (?do=revisions).
+**************************************************/
+
+/*____________ list of revisions ____________*/
+
+/* TODO: no real class to use!?! */
+.dokuwiki #dw__recent ul li,
+.dokuwiki #page__revisions ul li{
+}
+li.minor {
+    font-style: italic;
+}
+
+li span.date {
+}
+li a.diff_link {
+}
+li a.revisions_link {
+}
+li a.wikilink1,
+li a.wikilink2{
+}
+li span.sum {
+    font-weight: bold;
+}
+li span.user {
+}
+
+
+/*____________ page navigator ____________*/
+
+div.pagenav {
+    text-align: center;
+    margin-top: 1em;
+}
+div.pagenav-prev {
+    display: inline;
+    margin-right: 1em;
+}
+div.pagenav-next {
+    display: inline;
+    margin-left: 1em;
+}

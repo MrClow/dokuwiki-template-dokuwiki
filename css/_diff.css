@@ -1,0 +1,65 @@
+/**************************************************
+This file provides styles for the diff view, which
+shows you differences between two versions of a page
+(?do=diff).
+**************************************************/
+
+/* TODO: make color black instead of inherit for dark backgrounds? */
+
+.dokuwiki table.diff {
+    width: 100%;
+}
+.dokuwiki table.diff th,
+.dokuwiki table.diff td {
+    text-align: left;
+    vertical-align: top;
+    padding: 0;
+}
+
+/* table header */
+.dokuwiki table.diff th {
+    border-bottom: 1px solid __border__;
+    font-size: 110%;
+    width: 50%;
+    font-weight: normal;
+}
+.dokuwiki table.diff th a {
+    font-weight: bold;
+}
+.dokuwiki table.diff th span.user {
+    font-size: 80%;
+}
+.dokuwiki table.diff th span.sum {
+    font-size: 80%;
+    font-weight: bold;
+}
+.dokuwiki table.diff th.minor {
+    font-style: italic;
+}
+
+/* table body */
+.dokuwiki table.diff td {
+/* TODO: alternative fonts */
+    font-family: "Courier New",Courier,monospace;
+}
+.dokuwiki td.diff-blockheader {
+    font-weight: bold;
+}
+.dokuwiki td.diff-addedline {
+    background-color: #cfc;
+    color: inherit;
+}
+.dokuwiki td.diff-deletedline {
+    background-color: #fdd;
+    color: inherit;
+}
+.dokuwiki td.diff-context {
+    background-color: __background_neu__;
+    color: inherit;
+}
+.dokuwiki table.diff td.diff-addedline strong,
+.dokuwiki table.diff td.diff-deletedline strong {
+    color: #f00;
+    background-color: inherit;
+    font-weight: bold;
+}

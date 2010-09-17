@@ -1,0 +1,148 @@
+<?php
+/**
+ * DokuWiki Starter Template
+ *
+ * @link   http://dokuwiki.org/template:starter
+ * @author Anika Henke <anika@selfthinker.org>
+ */
+
+if (!defined('DOKU_INC')) die(); /* must be run from within DokuWiki */
+@require_once(dirname(__FILE__).'/tpl_functions.php'); /* include hook for template functions */
+
+?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="<?php echo $conf['lang'] ?>"
+  lang="<?php echo $conf['lang'] ?>" dir="<?php echo $lang['direction'] ?>">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title><?php tpl_pagetitle() ?> [<?php echo strip_tags($conf['title']) ?>]</title>
+    <?php tpl_metaheaders() ?>
+    <link rel="shortcut icon" href="<?php echo DOKU_TPL ?>images/favicon.ico" /><?php /* TODO: move into conf or: ml('favicon.ico') */ ?>
+    <?php @include(dirname(__FILE__).'/meta.html') /* include hook */ ?>
+</head>
+
+<body>
+    <?php /* with these Conditional Comments you can better address IE issues in CSS files,
+             precede CSS rules by #ie6 for IE6, #ie7 for IE7 and #ie8 for IE8 (div closes at the bottom) */ ?>
+    <!--[if IE 6 ]><div id="ie6"><![endif]--><!--[if IE 7 ]><div id="ie7"><![endif]--><!--[if IE 8 ]><div id="ie8"><![endif]-->
+    <?php @include(dirname(__FILE__).'/topheader.html') /* include hook */ ?>
+
+    <?php /* classes mode_<action> are added to make it possible to e.g. style a page differently if it's in edit mode,
+         see http://www.dokuwiki.org/devel:action_modes for a list of action modes */ ?>
+    <?php /* .dokuwiki should always be in one of the surrounding elements */ ?>
+    <div id="dokuwiki__site"><div class="dokuwiki__site dokuwiki mode_<?php echo $ACT ?>">
+        <?php html_msgarea() /* occasional error and info messages on top of the page */ ?>
+
+        <!-- HEADER -->
+        <div id="dokuwiki__header"><div class="dokuwiki__header">
+            <h1><?php tpl_link(wl(),$conf['title'],'id="dokuwiki__top" accesskey="h" title="[H]"') ?></h1>
+            <?php /* how to insert logo instead (if no CSS image replacement technique is used):
+                    upload your logo into the data/media folder (root of the media manager) and replace 'logo.png' accordingly:
+                    tpl_link(wl(),'<img src="'.ml('logo.png').'" alt="'.$conf['title'].'" />','id="dokuwiki__top" accesskey="h" title="[H]"') */ ?>
+            <p class="claim">tagline -- explaining what this site is about</p><?php /* TODO: tagline */ ?>
+            <h2>[[<?php tpl_pagetitle($ID) ?>]]</h2>
+
+            <?php /* TODO: skip links */ ?>
+            <ul class="a11y">
+                <li><a href="#">skip to nav</a></li>
+                <li><a href="#">skip to controls</a></li>
+                <li><a href="#">skip to content</a></li>
+            </ul>
+            <div class="clearer"></div>
+
+            <!-- SEARCH FORM -->
+            <?php tpl_searchform() ?>
+
+            <!-- BREADCRUMBS -->
+            <?php if($conf['breadcrumbs']){ ?>
+              <div class="breadcrumbs"><?php tpl_breadcrumbs() ?></div>
+            <?php } ?>
+            <?php if($conf['youarehere']){ ?>
+              <div class="breadcrumbs"><?php tpl_youarehere() ?></div>
+            <?php } ?>
+
+            <?php @include(dirname(__FILE__).'/header.html') /* include hook */ ?>
+            <div class="clearer"></div>
+            <hr class="a11y" />
+        </div></div><!-- /header -->
+
+
+        <div class="wrapper">
+
+            <div id="dokuwiki__sidebar"><div class="dokuwiki__sidebar">
+                <div id="dokuwiki__include" class="include">
+                    <?php tpl_include_page('sidebar') /* includes the given wiki page */ ?>
+                </div>
+
+                <div id="dokuwiki__controls"><div class="dokuwiki__controls">
+                    <h3 class="a11y">Page Controls</h3>
+
+                    <!-- PAGE ACTIONS -->
+                    <div id="dokuwiki__pagetools">
+                        <?php /* the optional second parameter of tpl_action() switches between a link and a button,
+                            e.g. a link inside a <li> would be: tpl_action('edit',1,'li') */ ?>
+                        <?php tpl_action('edit')?>
+                        <?php tpl_action('history')?>
+                        <?php tpl_action('backlink')?>
+                        <?php // TODO: _tpl_discussion() ?>
+                    </div>
+
+                    <!-- SITE ACTIONS -->
+                    <div id="dokuwiki__sitetools">
+                        <?php tpl_action('recent')?>
+                        <?php tpl_action('index')?>
+                    </div>
+
+                    <!-- AUTH ACTIONS -->
+                    <div id="dokuwiki__usertools">
+                        <div class="action">
+                            <?php tpl_action('subscribe')?>
+                            <?php tpl_action('admin')?>
+                            <?php tpl_action('profile')?>
+                            <?php tpl_action('login')?>
+                        </div>
+                        <div class="user"><?php tpl_userinfo() /* 'Logged in as ...' */ ?></div>
+                    </div>
+
+                    <div class="clearer"></div>
+                    <hr class="a11y" />
+                </div></div><!-- /controls -->
+
+                <div class="clearer"></div>
+            </div></div><!-- /sidebar -->
+
+            <div id="dokuwiki__content"><div class="dokuwiki__content">
+                <?php tpl_flush() /* flush the output buffer */ ?>
+                <?php @include(dirname(__FILE__).'/pageheader.html') /* include hook */ ?>
+
+                <div class="page">
+                    <!-- wikipage start -->
+                    <?php tpl_content() /* the main content */ ?>
+                    <!-- wikipage stop -->
+                    <div class="clearer"></div>
+                </div>
+
+                <?php tpl_flush() ?>
+                <?php @include(dirname(__FILE__).'/pagefooter.html') /* include hook */ ?>
+            </div></div><!-- /content -->
+
+            <div class="clearer"></div>
+            <hr class="a11y" />
+        </div><!-- /wrapper -->
+
+
+        <!-- FOOTER -->
+        <div id="dokuwiki__footer"><div class="dokuwiki__footer">
+            <div class="doc"><?php tpl_pageinfo() /* 'Last modified' etc */ ?></div>
+            <?php tpl_action('top',1) /* the second parameter switches between a link and a button */ ?>
+            <?php tpl_license('button') /* content license, parameters: img=*badge|button|0, imgonly=*0|1, return=*0|1 */ ?>
+        </div></div><!-- /footer -->
+
+
+    </div></div><!-- /site -->
+
+    <?php //@include(dirname(__FILE__).'/footer.html') /* include hook */ ?>
+    <div class="no"><?php tpl_indexerWebBug() /* provide DokuWiki housekeeping, required in all templates */ ?></div>
+    <!--[if ( IE 6 | IE 7 | IE 8 ) ]></div><![endif]-->
+</body>
+</html>
