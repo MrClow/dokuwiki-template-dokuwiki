@@ -17,14 +17,11 @@ if (!defined('DOKU_INC')) die(); /* must be run from within DokuWiki */
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title><?php tpl_pagetitle() ?> [<?php echo strip_tags($conf['title']) ?>]</title>
     <?php tpl_metaheaders() ?>
-    <link rel="shortcut icon" href="<?php echo DOKU_TPL ?>images/favicon.ico" /><?php /* TODO: move into conf or: ml('favicon.ico') */ ?>
+    <link rel="shortcut icon" href="<?php echo DOKU_TPL ?>images/favicon.ico" />
     <?php @include(dirname(__FILE__).'/meta.html') /* include hook */ ?>
 </head>
 
 <body>
-    <?php /* with these Conditional Comments you can better address IE issues in CSS files,
-             precede CSS rules by #ie6 for IE6, #ie7 for IE7 and #ie8 for IE8 (div closes at the bottom) */ ?>
-    <!--[if IE 6 ]><div id="ie6"><![endif]--><!--[if IE 7 ]><div id="ie7"><![endif]--><!--[if IE 8 ]><div id="ie8"><![endif]-->
     <?php @include(dirname(__FILE__).'/topheader.html') /* include hook */ ?>
 
     <?php /* classes mode_<action> are added to make it possible to e.g. style a page differently if it's in edit mode,
@@ -36,9 +33,6 @@ if (!defined('DOKU_INC')) die(); /* must be run from within DokuWiki */
         <!-- HEADER -->
         <div id="dokuwiki__header"><div class="dokuwiki__header">
             <h1><?php tpl_link(wl(),$conf['title'],'id="dokuwiki__top" accesskey="h" title="[H]"') ?></h1>
-            <?php /* how to insert logo instead (if no CSS image replacement technique is used):
-                    upload your logo into the data/media folder (root of the media manager) and replace 'logo.png' accordingly:
-                    tpl_link(wl(),'<img src="'.ml('logo.png').'" alt="'.$conf['title'].'" />','id="dokuwiki__top" accesskey="h" title="[H]"') */ ?>
             <p class="claim">tagline -- explaining what this site is about</p><?php /* TODO: tagline */ ?>
             <h2>[[<?php tpl_pagetitle($ID) ?>]]</h2>
 
@@ -53,13 +47,6 @@ if (!defined('DOKU_INC')) die(); /* must be run from within DokuWiki */
             <!-- SEARCH FORM -->
             <?php tpl_searchform() ?>
 
-            <!-- BREADCRUMBS -->
-            <?php if($conf['breadcrumbs']){ ?>
-              <div class="breadcrumbs"><?php tpl_breadcrumbs() ?></div>
-            <?php } ?>
-            <?php if($conf['youarehere']){ ?>
-              <div class="breadcrumbs"><?php tpl_youarehere() ?></div>
-            <?php } ?>
 
             <?php @include(dirname(__FILE__).'/header.html') /* include hook */ ?>
             <div class="clearer"></div>
@@ -68,13 +55,20 @@ if (!defined('DOKU_INC')) die(); /* must be run from within DokuWiki */
 
 
         <div class="wrapper">
+            <!-- BREADCRUMBS -->
+            <?php if($conf['breadcrumbs']){ ?>
+              <div class="breadcrumbs"><?php tpl_breadcrumbs() ?></div>
+            <?php } ?>
+            <?php if($conf['youarehere']){ ?>
+              <div class="breadcrumbs"><?php tpl_youarehere() ?></div>
+            <?php } ?>
 
-            <div id="dokuwiki__sidebar"><div class="dokuwiki__sidebar">
+            <div id="dokuwiki__sidebar"><div class="pad">
                 <div id="dokuwiki__include" class="include">
                     <?php tpl_include_page('sidebar') /* includes the given wiki page */ ?>
                 </div>
 
-                <div id="dokuwiki__controls"><div class="dokuwiki__controls">
+                <div id="dokuwiki__controls"><div class="pad">
                     <h3 class="a11y">Page Controls</h3>
 
                     <!-- PAGE ACTIONS -->
@@ -111,7 +105,7 @@ if (!defined('DOKU_INC')) die(); /* must be run from within DokuWiki */
                 <div class="clearer"></div>
             </div></div><!-- /sidebar -->
 
-            <div id="dokuwiki__content"><div class="dokuwiki__content">
+            <div id="dokuwiki__content"><div class="pad">
                 <?php tpl_flush() /* flush the output buffer */ ?>
                 <?php @include(dirname(__FILE__).'/pageheader.html') /* include hook */ ?>
 
@@ -132,7 +126,7 @@ if (!defined('DOKU_INC')) die(); /* must be run from within DokuWiki */
 
 
         <!-- FOOTER -->
-        <div id="dokuwiki__footer"><div class="dokuwiki__footer">
+        <div id="dokuwiki__footer"><div class="pad">
             <div class="doc"><?php tpl_pageinfo() /* 'Last modified' etc */ ?></div>
             <?php tpl_action('top',1) /* the second parameter switches between a link and a button */ ?>
             <?php tpl_license('button') /* content license, parameters: img=*badge|button|0, imgonly=*0|1, return=*0|1 */ ?>
@@ -143,6 +137,5 @@ if (!defined('DOKU_INC')) die(); /* must be run from within DokuWiki */
 
     <?php //@include(dirname(__FILE__).'/footer.html') /* include hook */ ?>
     <div class="no"><?php tpl_indexerWebBug() /* provide DokuWiki housekeeping, required in all templates */ ?></div>
-    <!--[if ( IE 6 | IE 7 | IE 8 ) ]></div><![endif]-->
 </body>
 </html>
