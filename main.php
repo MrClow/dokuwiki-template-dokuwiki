@@ -84,21 +84,8 @@ if (!defined('DOKU_INC')) die(); /* must be run from within DokuWiki */
               <div class="breadcrumbs"><?php tpl_youarehere() ?></div>
             <?php } ?>
 
-            <div id="dokuwiki__sidebar"><div class="pad">
-                <div id="dokuwiki__include" class="include">
-                    <?php tpl_include_page('sidebar') /* includes the given wiki page */ ?>
-                </div>
-<?/*
-                <div id="dokuwiki__controls"><div class="pad">
-                    <h3 class="a11y">Page Controls</h3>
-
-
-
-                    <div class="clearer"></div>
-                    <hr class="a11y" />
-                </div></div><!-- /controls -->
-*/?>
-
+            <div id="dokuwiki__sidebar"><div class="pad include">
+                <?php tpl_include_page('sidebar') /* includes the given wiki page */ ?>
                 <div class="clearer"></div>
             </div></div><!-- /sidebar -->
 

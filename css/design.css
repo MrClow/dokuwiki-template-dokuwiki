@@ -3,21 +3,35 @@
 ********************************************************************/
 #dokuwiki__header {
 }
+
 #dokuwiki__header h1 {
-    float: left;
-    clear: none;
-}
-#dokuwiki__header p.claim {
-    float: left;
-    padding-left: 10px;
 }
 #dokuwiki__header h2 {
-    float: right;
-    clear: none;
+    font-size: 1em;
 }
-#dokuwiki__header form.search {
+
+#dokuwiki__usertools {
     float: right;
 }
+#dokuwiki__usertools ul {
+}
+#dokuwiki__usertools ul li {
+    display: inline;
+}
+
+#dokuwiki__sitetools {
+    float: right;
+}
+#dokuwiki__sitetools form.search {
+}
+#dokuwiki__sitetools ul {
+    text-align: right;
+}
+#dokuwiki__sitetools ul li {
+    display: inline;
+}
+
+
 #dokuwiki__header div.breadcrumbs {
 }
 

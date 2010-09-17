@@ -33,13 +33,11 @@ body #dokuwiki__site {
 .wrapper {
     position: relative;
     margin-bottom: 10px;
-    zoom: 1;
 }
 #dokuwiki__sidebar {
     width: 250px;
     float: left;
     position: relative;
-    zoom: 1;
 }
 #dokuwiki__sidebar .pad {
     padding: 0;
@@ -56,38 +54,11 @@ body #dokuwiki__site {
 }
 
 
-
-
-
 #dokuwiki__include {
     padding: 10px;
 }
 #dokuwiki__include .pad {
 }
-
-#dokuwiki__controls {
-    padding: 10px;
-}
-.dokuwiki__controls {
-}
-
-/*
-#dokuwiki__pagetools {
-    float: left;
-}
-#dokuwiki__sitetools {
-    float: right;
-}
-#dokuwiki__usertools {
-    clear: both;
-}
-#dokuwiki__usertools .action {
-    float: left;
-}
-#dokuwiki__usertools .user {
-    float: right;
-}
-*/
 
 
 #dokuwiki__footer {
@@ -103,7 +74,6 @@ body #dokuwiki__site {
 }
 #dokuwiki__header,
 #dokuwiki__include,
-#dokuwiki__controls,
 #dokuwiki__content .pad,
 #dokuwiki__footer {
     background-color: #fff;
