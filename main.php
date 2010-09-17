@@ -33,8 +33,10 @@ if (!defined('DOKU_INC')) die(); /* must be run from within DokuWiki */
         <!-- HEADER -->
         <div id="dokuwiki__header"><div class="pad">
 
-            <h1 id="dokuwiki__top"><?php tpl_link(wl(),$conf['title'],'id="dokuwiki__top" accesskey="h" title="[H]"') ?></h1>
-            <h2>[[<?php tpl_pagetitle($ID) ?>]]</h2>
+            <div class="header_titles">
+                <h1 id="dokuwiki__top"><?php tpl_link(wl(),$conf['title'],'id="dokuwiki__top" accesskey="h" title="[H]"') ?></h1>
+                <h2>[[<?php tpl_pagetitle($ID) ?>]]</h2>
+            </div>
 
             <?php /* TODO: skip links
             <ul class="a11y">

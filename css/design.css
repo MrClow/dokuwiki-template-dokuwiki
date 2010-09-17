@@ -4,7 +4,11 @@
 #dokuwiki__header {
 }
 
+#dokuwiki__header .header_titles {
+    float: left;
+}
 #dokuwiki__header h1 {
+    margin-bottom: 0;
 }
 #dokuwiki__header h2 {
     font-size: 1em;
@@ -21,6 +25,7 @@
 
 #dokuwiki__sitetools {
     float: right;
+    clear: right;
 }
 #dokuwiki__sitetools form.search {
 }
