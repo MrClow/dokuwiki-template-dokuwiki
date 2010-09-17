@@ -5,28 +5,28 @@ TODO:
 
 */
 
-/*
-body.center {
+body {
     margin: 0 auto;
     text-align: center;
 }
-body.center #dokuwiki__site {
+body #dokuwiki__site {
     text-align: left;
     margin: 0 auto;
 }
-*/
 
 #dokuwiki__site {
     width: auto;
+    max-width: 1240px;
+    /* @todo min-width: */
 }
-.dokuwiki__site {
+#dokuwiki__site .pad {
     padding: 10px;
 }
 
 #dokuwiki__header {
     margin-bottom: 10px;
 }
-.dokuwiki__header {
+#dokuwiki__header .pad {
     padding: 10px;
 }
 
@@ -41,7 +41,8 @@ body.center #dokuwiki__site {
     position: relative;
     zoom: 1;
 }
-.dokuwiki__sidebar {
+#dokuwiki__sidebar .pad {
+    padding: 0;
 }
 
 #dokuwiki__content {
@@ -49,7 +50,7 @@ body.center #dokuwiki__site {
     margin-left:-250px;
     width:100%;
 }
-.dokuwiki__content {
+#dokuwiki__content .pad {
     padding: 10px;
     margin-left:260px;
 }
@@ -61,7 +62,7 @@ body.center #dokuwiki__site {
 #dokuwiki__include {
     padding: 10px;
 }
-.dokuwiki__include {
+#dokuwiki__include .pad {
 }
 
 #dokuwiki__controls {
@@ -92,7 +93,7 @@ body.center #dokuwiki__site {
 #dokuwiki__footer {
     clear: both;
 }
-.dokuwiki__footer {
+#dokuwiki__footer .pad {
     padding: 10px;
 }
 
@@ -103,7 +104,7 @@ body.center #dokuwiki__site {
 #dokuwiki__header,
 #dokuwiki__include,
 #dokuwiki__controls,
-.dokuwiki__content,
+#dokuwiki__content .pad,
 #dokuwiki__footer {
     background-color: #fff;
 }
