@@ -31,22 +31,39 @@ if (!defined('DOKU_INC')) die(); /* must be run from within DokuWiki */
         <?php html_msgarea() /* occasional error and info messages on top of the page */ ?>
 
         <!-- HEADER -->
-        <div id="dokuwiki__header"><div class="dokuwiki__header">
+        <div id="dokuwiki__header"><div class="pad">
+
             <h1><?php tpl_link(wl(),$conf['title'],'id="dokuwiki__top" accesskey="h" title="[H]"') ?></h1>
-            <p class="claim">tagline -- explaining what this site is about</p><?php /* TODO: tagline */ ?>
             <h2>[[<?php tpl_pagetitle($ID) ?>]]</h2>
 
-            <?php /* TODO: skip links */ ?>
+            <?php /* TODO: skip links
             <ul class="a11y">
                 <li><a href="#">skip to nav</a></li>
                 <li><a href="#">skip to controls</a></li>
                 <li><a href="#">skip to content</a></li>
             </ul>
             <div class="clearer"></div>
+            */ ?>
 
-            <!-- SEARCH FORM -->
-            <?php tpl_searchform() ?>
+            <!-- AUTH ACTIONS -->
+            <h3 class="a11y">User Tools</h3> <?php//TODO: localize ?>
+            <ul id="dokuwiki__usertools">
+                <?php
+                     tpl_action('admin',1,'li');
+                     tpl_action('profile',1,'li',false,'','',$INFO['userinfo']['name']);
+                     tpl_action('login',1,'li');
+                ?>
+            </ul>
 
+            <!-- SITE ACTIONS -->
+            <h3 class="a11y">Site Tools</h3> <?php//TODO: localize ?>
+            <div id="dokuwiki__sitetools">
+                <?php
+                     tpl_action('index');
+                     tpl_action('recent');
+                     tpl_searchform();
+                ?>
+            </div>
 
             <?php @include(dirname(__FILE__).'/header.html') /* include hook */ ?>
             <div class="clearer"></div>
@@ -67,40 +84,27 @@ if (!defined('DOKU_INC')) die(); /* must be run from within DokuWiki */
                 <div id="dokuwiki__include" class="include">
                     <?php tpl_include_page('sidebar') /* includes the given wiki page */ ?>
                 </div>
-
+<?/*
                 <div id="dokuwiki__controls"><div class="pad">
                     <h3 class="a11y">Page Controls</h3>
 
                     <!-- PAGE ACTIONS -->
                     <div id="dokuwiki__pagetools">
-                        <?php /* the optional second parameter of tpl_action() switches between a link and a button,
-                            e.g. a link inside a <li> would be: tpl_action('edit',1,'li') */ ?>
+                        <?php
+                            // the optional second parameter of tpl_action() switches between a link and a button,
+                            // e.g. a link inside a <li> would be: tpl_action('edit',1,'li')
+                        ?>
                         <?php tpl_action('edit')?>
                         <?php tpl_action('history')?>
                         <?php tpl_action('backlink')?>
-                        <?php // TODO: _tpl_discussion() ?>
-                    </div>
-
-                    <!-- SITE ACTIONS -->
-                    <div id="dokuwiki__sitetools">
-                        <?php tpl_action('recent')?>
-                        <?php tpl_action('index')?>
-                    </div>
-
-                    <!-- AUTH ACTIONS -->
-                    <div id="dokuwiki__usertools">
-                        <div class="action">
                             <?php tpl_action('subscribe')?>
-                            <?php tpl_action('admin')?>
-                            <?php tpl_action('profile')?>
-                            <?php tpl_action('login')?>
-                        </div>
-                        <div class="user"><?php tpl_userinfo() /* 'Logged in as ...' */ ?></div>
                     </div>
+
 
                     <div class="clearer"></div>
                     <hr class="a11y" />
                 </div></div><!-- /controls -->
+*/?>
 
                 <div class="clearer"></div>
             </div></div><!-- /sidebar -->
