@@ -16,11 +16,12 @@ body #dokuwiki__site {
 
 #dokuwiki__site {
     width: auto;
-    max-width: 1240px;
+    max-width: 960px;
     /* @todo min-width: */
 }
 #dokuwiki__site .pad {
     padding: 10px;
+    margin-right: 20px;
 }
 
 #dokuwiki__header {

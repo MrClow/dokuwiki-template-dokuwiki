@@ -36,10 +36,30 @@
     display: inline;
 }
 
-
 #dokuwiki__header div.breadcrumbs {
 }
 
+#dokuwiki__pagetools {
+  position: fixed;
+  right: 0;
+  top: 160px;
+  width: 24px;
+  background: #333;
+}
+
+#dokuwiki__pagetools:hover {
+  width: auto;
+}
+
+#dokuwiki__pagetools ul {
+}
+
+#dokuwiki__pagetools ul li {
+}
+
+#dokuwiki__pagetools ul li a {
+  color: #fff;
+}
 
 /* --------------------------------------------------
 
@@ -64,19 +84,6 @@ div.dokuwiki span.user {
 
 /* content
 ********************************************************************/
-
-/*____________ section indenting ____________*/
-.dokuwiki h1 {margin-left: 0;}
-.dokuwiki h2 {margin-left: 20px;}
-.dokuwiki h3 {margin-left: 40px;}
-.dokuwiki h4 {margin-left: 60px;}
-.dokuwiki h5 {margin-left: 80px;}
-.dokuwiki div.level1 {margin-left: 0;}
-.dokuwiki div.level2 {margin-left: 20px;}
-.dokuwiki div.level3 {margin-left: 40px;}
-.dokuwiki div.level4 {margin-left: 60px;}
-.dokuwiki div.level5 {margin-left: 80px;}
-
 
 /*____________ tables ____________*/
 
