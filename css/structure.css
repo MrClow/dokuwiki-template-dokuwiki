@@ -35,24 +35,30 @@ body {
     position: relative;
     margin-bottom: 1em;
 }
-#dokuwiki__aside {
-    width: 250px;
-    float: left;
-    position: relative;
-}
-#dokuwiki__aside .pad {
-    padding: 0;
-    margin: 0 1em 1em 0;
-}
 
-#dokuwiki__content {
-    float: right;
-    margin-left: -250px;
-    width: 100%;
-}
-#dokuwiki__content .pad {
-    margin-left: 250px;
-}
+    /* show sidebar only in show mode */
+    #dokuwiki__aside {
+        display: none;
+    }
+    .mode_show #dokuwiki__aside{
+        width: 250px;
+        float: left;
+        position: relative;
+        display: block;
+    }
+    #dokuwiki__aside .pad {
+        margin: 0 1em 0 0;
+    }
+
+    /* make content wider when there's no sidebar */
+    .mode_show #dokuwiki__content {
+        float: right;
+        margin: 0 0 0 -250px;
+        width: 100%;
+    }
+    .mode_show #dokuwiki__content .pad {
+        margin-left: 250px;
+    }
 
 #dokuwiki__footer {
     clear: both;
