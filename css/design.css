@@ -2,42 +2,38 @@
 /* header
 ********************************************************************/
 #dokuwiki__header {
+    margin-bottom: 1em;
 }
-
-#dokuwiki__header .header_titles {
-    float: left;
+#dokuwiki__header .headings {
 }
 #dokuwiki__header h1 {
     margin-bottom: 0;
 }
+#dokuwiki__header p.claim {
+    margin-bottom: 0;
+}
 #dokuwiki__header h2 {
+    margin-bottom: 0;
     font-size: 1em;
 }
 
-#dokuwiki__usertools {
-    float: right;
+#dokuwiki__header .tools {
 }
-#dokuwiki__usertools ul {
+#dokuwiki__header .tools ul {
+    margin-bottom: 1em;
 }
-#dokuwiki__usertools ul li {
-    display: inline;
+#dokuwiki__header .tools li {
 }
-
-#dokuwiki__sitetools {
-    float: right;
-    clear: right;
-}
-#dokuwiki__sitetools form.search {
-}
-#dokuwiki__sitetools ul {
-    text-align: right;
-}
-#dokuwiki__sitetools ul li {
-    display: inline;
+#dokuwiki__header form.search {
+    margin-bottom: .5em;
+    display: block;
 }
 
 #dokuwiki__header div.breadcrumbs {
 }
+
+/* page tools
+********************************************************************/
 
 #dokuwiki__pagetools {
   position: fixed;
@@ -49,12 +45,6 @@
 
 #dokuwiki__pagetools:hover {
   width: auto;
-}
-
-#dokuwiki__pagetools ul {
-}
-
-#dokuwiki__pagetools ul li {
 }
 
 #dokuwiki__pagetools ul li a {
@@ -84,6 +74,12 @@ div.dokuwiki span.user {
 
 /* content
 ********************************************************************/
+
+.dokuwiki .include ul,
+.dokuwiki .include ol {
+    padding-left: 0;
+}
+
 
 /*____________ tables ____________*/
 

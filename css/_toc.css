@@ -55,6 +55,7 @@
 }
 .dokuwiki ul.toc li {
     list-style: none;
+    margin-left: 0;
 }
 .dokuwiki ul.toc ul {
     padding-left: 1em;

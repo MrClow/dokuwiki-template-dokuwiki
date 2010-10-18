@@ -1,81 +1,61 @@
-/*
-TODO:
-  * float clearing problem (hx) -- when content is flexible
-  * other problems with .wrapper2 absolute
-
-*/
 
 body {
     margin: 0 auto;
     text-align: center;
 }
-body #dokuwiki__site {
+#dokuwiki__site {
     text-align: left;
     margin: 0 auto;
-}
-
-#dokuwiki__site {
     width: auto;
     max-width: 960px;
     /* @todo min-width: */
 }
-#dokuwiki__site .pad {
-    padding: 10px;
+#dokuwiki__site .dokuwiki {
+    padding: 1em;
     margin-right: 20px;
 }
 
 #dokuwiki__header {
-    margin-bottom: 10px;
+    margin-bottom: 1em;
 }
 #dokuwiki__header .pad {
-    padding: 10px;
 }
+    #dokuwiki__header .headings {
+        float: left;
+    }
+    #dokuwiki__header .tools {
+        float: right;
+        text-align: right;
+    }
+    #dokuwiki__header .tools li {
+        display: inline;
+    }
 
 .wrapper {
     position: relative;
-    margin-bottom: 10px;
+    margin-bottom: 1em;
 }
-#dokuwiki__sidebar {
+#dokuwiki__aside {
     width: 250px;
     float: left;
     position: relative;
 }
-#dokuwiki__sidebar .pad {
+#dokuwiki__aside .pad {
     padding: 0;
+    margin: 0 1em 1em 0;
 }
 
 #dokuwiki__content {
-    float:right;
-    margin-left:-250px;
-    width:100%;
+    float: right;
+    margin-left: -250px;
+    width: 100%;
 }
 #dokuwiki__content .pad {
-    padding: 10px;
-    margin-left:260px;
+    margin-left: 250px;
 }
-
-
-#dokuwiki__include {
-    padding: 10px;
-}
-#dokuwiki__include .pad {
-}
-
 
 #dokuwiki__footer {
     clear: both;
 }
 #dokuwiki__footer .pad {
-    padding: 10px;
-}
-
-
-#dokuwiki__site {
-    background-color: #ccc;
-}
-#dokuwiki__header,
-#dokuwiki__include,
-#dokuwiki__content .pad,
-#dokuwiki__footer {
-    background-color: #fff;
 }

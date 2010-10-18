@@ -17,7 +17,7 @@ if (!defined('DOKU_INC')) die(); /* must be run from within DokuWiki */
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title><?php tpl_pagetitle() ?> [<?php echo strip_tags($conf['title']) ?>]</title>
     <?php tpl_metaheaders() ?>
-    <link rel="shortcut icon" href="<?php echo DOKU_TPL ?>images/favicon.ico" />
+    <link rel="shortcut icon" href="<?php echo ml('favicon.ico') ?>" />
     <?php @include(dirname(__FILE__).'/meta.html') /* include hook */ ?>
 </head>
 
@@ -27,48 +27,50 @@ if (!defined('DOKU_INC')) die(); /* must be run from within DokuWiki */
     <?php /* classes mode_<action> are added to make it possible to e.g. style a page differently if it's in edit mode,
          see http://www.dokuwiki.org/devel:action_modes for a list of action modes */ ?>
     <?php /* .dokuwiki should always be in one of the surrounding elements */ ?>
-    <div id="dokuwiki__site"><div class="dokuwiki__site dokuwiki mode_<?php echo $ACT ?>">
+    <div id="dokuwiki__site"><div class="dokuwiki mode_<?php echo $ACT ?>">
         <?php html_msgarea() /* occasional error and info messages on top of the page */ ?>
 
         <!-- HEADER -->
         <div id="dokuwiki__header"><div class="pad">
 
-            <div class="header_titles">
+            <div class="headings">
                 <h1 id="dokuwiki__top"><?php tpl_link(wl(),$conf['title'],'id="dokuwiki__top" accesskey="h" title="[H]"') ?></h1>
-                <h2>[[<?php tpl_pagetitle($ID) ?>]]</h2>
-            </div>
+                <h2><?php if (!$conf['useheading']) echo '[[' ?><?php tpl_pagetitle($ID) ?><?php if (!$conf['useheading']) echo ']]' ?></h2>
 
-            <?php /* TODO: skip links
-            <ul class="a11y">
-                <li><a href="#">skip to nav</a></li>
-                <li><a href="#">skip to controls</a></li>
-                <li><a href="#">skip to content</a></li>
-            </ul>
-            <div class="clearer"></div>
-            */ ?>
-
-            <!-- AUTH ACTIONS -->
-            <div id="dokuwiki__usertools">
-                <h3 class="a11y">User Tools</h3> <?php//TODO: localize ?>
-                <ul>
-                <?php
-                     tpl_action('admin',1,'li');
-                     tpl_action('profile',1,'li',false,'','',$INFO['userinfo']['name']);
-                     tpl_action('login',1,'li');
-                ?>
+                <?php /* TODO: skip links
+                <ul class="a11y">
+                    <li><a href="#">skip to nav</a></li>
+                    <li><a href="#">skip to controls</a></li>
+                    <li><a href="#">skip to content</a></li>
                 </ul>
+                <div class="clearer"></div>
+                */ ?>
             </div>
 
-            <!-- SITE ACTIONS -->
-            <div id="dokuwiki__sitetools">
-                <h3 class="a11y">Site Tools</h3> <?php//TODO: localize ?>
-                <?php tpl_searchform(); ?>
-                <ul>
+            <div class="tools">
+                <!-- AUTH ACTIONS -->
+                <div id="dokuwiki__usertools">
+                    <h3 class="a11y">User Tools</h3> <?php /*TODO: localize*/ ?>
+                    <ul>
                     <?php
-                         tpl_action('recent',1,'li');
-                         tpl_action('index',1,'li');
+                         tpl_action('admin', 1, 'li');
+                         tpl_action('profile', 1, 'li', 0, '', '', $INFO['userinfo']['name'].' ('.$_SERVER['REMOTE_USER'].')');
+                         tpl_action('login', 1, 'li');
                     ?>
-                </ul>
+                    </ul>
+                </div>
+
+                <!-- SITE ACTIONS -->
+                <div id="dokuwiki__sitetools">
+                    <h3 class="a11y">Site Tools</h3> <?php /*TODO: localize*/ ?>
+                    <?php tpl_searchform(); ?>
+                    <ul>
+                        <?php
+                             tpl_action('recent', 1, 'li');
+                             tpl_action('index', 1, 'li');
+                        ?>
+                    </ul>
+                </div>
             </div>
 
             <?php @include(dirname(__FILE__).'/header.html') /* include hook */ ?>
@@ -87,7 +89,7 @@ if (!defined('DOKU_INC')) die(); /* must be run from within DokuWiki */
 
 
         <div class="wrapper">
-            <div id="dokuwiki__sidebar"><div class="pad include">
+            <div id="dokuwiki__aside"><div class="pad include">
                 <?php tpl_include_page('sidebar') /* includes the given wiki page */ ?>
                 <div class="clearer"></div>
             </div></div><!-- /sidebar -->
@@ -112,7 +114,7 @@ if (!defined('DOKU_INC')) die(); /* must be run from within DokuWiki */
 
             <!-- PAGE ACTIONS -->
             <div id="dokuwiki__pagetools">
-                <h3 class="a11y">Page Tools</h3> <?php//TODO: localize ?>
+                <h3 class="a11y">Page Tools</h3> <?php /*TODO: localize*/ ?>
                 <ul>
                     <?php
                         tpl_action('edit',1,'li');
