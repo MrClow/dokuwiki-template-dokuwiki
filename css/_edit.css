@@ -37,7 +37,10 @@ button.pickerbutton {
 /*____________ edit area ____________*/
 
 textarea.edit {
-    width: 100%;
+    /* should just be "width: 100%", but IE8 doesn't like it, see FS#1910 + FS#1667 */
+    width: 700px;
+    min-width: 100%;
+    max-width: 100%;
 /* TODO: alternative fonts */
     font-family: monospace;
 /* TODO: colours needed? */
@@ -98,6 +101,6 @@ div.dokuwiki div.preview {
     float: right;
 }
 .section_highlight {
-    background-color: __background_alt__;
+    background-color: __background_alt__ !important;
 }
 

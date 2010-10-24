@@ -14,7 +14,7 @@ This file provides styles for all types of links.
     color: __missing__;
     background-color: inherit;
     text-decoration: none !important;
-    border-bottom: dashed 1px __missing__ !important;
+    border-bottom: 1px dashed __missing__;
 }
 
 /*____________ other link types ____________*/
@@ -38,9 +38,11 @@ This file provides styles for all types of links.
 .dokuwiki a.mail {
     background-image: url(images/mail_icon.gif);
 }
-/* link to some embedded media (icons are set by dokuwiki) */
+
+/* icons of the following are set by dokuwiki in lib/exe/css.php */
+/* link to some embedded media */
 .dokuwiki a.media {
 }
-/* interwiki link (icons are set by dokuwiki) */
+/* interwiki link */
 .dokuwiki a.interwiki {
 }

@@ -3,25 +3,20 @@ This file provides styles for the Administration
 overiew (?do=admin).
 **************************************************/
 
-.dokuwiki #admin__version {
-    clear:left;
-    float: right;
-    color: __text_neu__;
-}
-
 .dokuwiki ul.admin_tasks {
-    font-size: 115%;
     float: left;
     width: 40%;
     list-style-type: none;
+    font-size: 115%;
 }
 
 .dokuwiki ul.admin_tasks li {
-    line-height: 22px;
     padding-left: 35px;
-    margin-bottom: 1em;
+    margin: 0 0 1em 0;
     font-weight: bold;
+    list-style-type: none;
     background: transparent none no-repeat scroll 0 0;
+    color: inherit;
 }
 
 .dokuwiki ul.admin_tasks li.admin_acl {
@@ -41,4 +36,12 @@ overiew (?do=admin).
 }
 .dokuwiki ul.admin_tasks li.admin_popularity {
     background-image: url(../../images/admin/popularity.png);
+}
+
+/* DokuWiki version below */
+.dokuwiki #admin__version {
+    clear: left;
+    float: right;
+    color: __text_neu__;
+    background-color: inherit;
 }

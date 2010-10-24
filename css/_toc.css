@@ -1,11 +1,16 @@
-/* toc (table of contents)
+/**************************************************
+This file provides styles for the TOC (table of
+contents) and the sitemap (?do=index).
+**************************************************/
+
+/* toc
 ********************************************************************/
 
 /* toc container */
 .dokuwiki div.toc {
     float: right;
-    margin: 0 0 1.5em 1.5em;
-    width: 200px;
+    margin: 0 0 1.4em 1.4em;
+    width: 12em;
 }
 
 /*____________ toc header ____________*/
@@ -43,41 +48,41 @@
 
 .dokuwiki #toc__inside {
     padding: .3em;
-/*
-    border: 1px solid __border__;
-*/
     background-color: __background_alt__;
     color: __text__;
 }
-.dokuwiki ul.toc {
-    padding-left: 0;
-    margin-bottom: 0;
+.dokuwiki #toc__inside ul {
+    padding: 0;
+    margin: 0;
 }
-.dokuwiki ul.toc li {
+.dokuwiki #toc__inside ul li {
     list-style: none;
-    margin-left: 0;
+    padding: 0;
+    margin: 0;
 }
-.dokuwiki ul.toc ul {
+.dokuwiki #toc__inside ul ul {
     padding-left: 1em;
 }
-.dokuwiki ul.toc li li {
+.dokuwiki #toc__inside ul ul li {
 }
-/* TODO: ???
-.dokuwiki ul.toc li.clear {
-    background-image: none;
-    padding-left:0.4em;
+.dokuwiki #toc__inside ul li a {
 }
-*/
 
-.dokuwiki a.toc {
+/* in case of toc list jumping one level
+  (e.g. if heading level 3 follows directly after heading level 1) */
+.dokuwiki #toc__inside ul li.clear {
 }
 
 
-/* index (?do=index)
+/* sitemap
 ********************************************************************/
 
-/* TODO: changes images */
-.dokuwiki ul.idx li {list-style-image: url(images/bullet.gif);}
-.dokuwiki ul.idx li.open {list-style-image: url(images/open.gif);}
-.dokuwiki ul.idx li.closed {list-style-image: url(images/closed.gif);}
-
+.dokuwiki ul.idx li {
+    list-style-image: url(images/bullet.png);
+}
+.dokuwiki ul.idx li.open {
+    list-style-image: url(images/open.png);
+}
+.dokuwiki ul.idx li.closed {
+    list-style-image: url(images/closed.png);
+}

@@ -3,43 +3,59 @@ This file provides styles for the recent changes
 (?do=recent) and old revisions (?do=revisions).
 **************************************************/
 
-/*____________ list of revisions ____________*/
+/*____________ list of revisions / recent changes ____________*/
 
-/* TODO: no real class to use!?! */
 .dokuwiki #dw__recent ul li,
-.dokuwiki #page__revisions ul li{
+.dokuwiki #page__revisions ul li {
+    list-style: none;
+    margin-left: 0;
 }
-li.minor {
-    font-style: italic;
+.dokuwiki #dw__recent ul li *,
+.dokuwiki #page__revisions ul li * {
+    vertical-align: middle;
+}
+.dokuwiki #dw__recent ul li.minor,
+.dokuwiki #page__revisions ul li.minor {
+    color: __text_alt__;
+    background-color: inherit;
 }
 
-li span.date {
+.dokuwiki #dw__recent li span.date,
+.dokuwiki #page__revisions li span.date {
 }
-li a.diff_link {
+.dokuwiki #dw__recent li a.diff_link,
+.dokuwiki #page__revisions li a.diff_link {
+    vertical-align: baseline;
 }
-li a.revisions_link {
+.dokuwiki #dw__recent li a.revisions_link,
+.dokuwiki #page__revisions li a.revisions_link {
+    vertical-align: baseline;
 }
-li a.wikilink1,
-li a.wikilink2{
+.dokuwiki #dw__recent li a.wikilink1,
+.dokuwiki #dw__recent li a.wikilink2,
+.dokuwiki #page__revisions li a.wikilink1,
+.dokuwiki #page__revisions li a.wikilink2 {
 }
-li span.sum {
+.dokuwiki #dw__recent li span.sum,
+.dokuwiki #page__revisions li span.sum {
     font-weight: bold;
 }
-li span.user {
+.dokuwiki #dw__recent li span.user,
+.dokuwiki #page__revisions li span.user {
 }
 
 
 /*____________ page navigator ____________*/
 
-div.pagenav {
+.dokuwiki div.pagenav {
     text-align: center;
-    margin-top: 1em;
+    margin: 1.4em 0;
 }
-div.pagenav-prev {
+.dokuwiki div.pagenav-prev {
     display: inline;
-    margin-right: 1em;
+    margin-right: .5em;
 }
-div.pagenav-next {
+.dokuwiki div.pagenav-next {
     display: inline;
-    margin-left: 1em;
+    margin-left: .5em;
 }

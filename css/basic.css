@@ -113,7 +113,6 @@ table {
     border-collapse: collapse;
     empty-cells: show;
     border-spacing: 0;
-    table-layout: fixed;
     border: 1px solid #ccc; /* §colour */
 }
 /* @todo: research how other people do captions (below?) */
@@ -175,7 +174,7 @@ img {
     border-width: 0;
     vertical-align: middle;
     color: #666; /* §colour */
-    background-color: inherit;
+    background-color: transparent;
     font-style: italic;
 }
 /* embedded images (styles are already partly set in lib/styles/style.css) */
@@ -201,6 +200,7 @@ acronym, abbr {
 
 pre, code, samp, kbd {
     font: normal 1em Consolas, "Andale Mono WT", "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Liberation Mono", Monaco, "Courier New", monospace; /* §font */
+    direction: ltr;
 }
 pre {
     overflow: auto;
@@ -361,6 +361,7 @@ div.clear {
     color: __text__;
     border: 1px solid __border__;
     line-height: 1.2;
+    display: none;
 /*
 TODO: .JSpopup not always inside .dokuwiki!
     font-size: 89%;
