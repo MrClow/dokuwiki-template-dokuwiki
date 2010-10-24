@@ -1,7 +1,7 @@
-/**************************************************
-This file provides styles for the Administration
-overiew (?do=admin).
-**************************************************/
+/**
+ * This file provides styles for the Administration overview
+ * (?do=admin).
+ */
 
 .dokuwiki ul.admin_tasks {
     float: left;

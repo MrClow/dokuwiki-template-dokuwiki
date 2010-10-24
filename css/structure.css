@@ -1,10 +1,13 @@
+/**
+ * This file provides styles for the general layout structure.
+ *
+ * @author Anika Henke <anika@selfthinker.org>
+ */
 
 body {
     margin: 0 auto;
-    text-align: center;
 }
 #dokuwiki__site {
-    text-align: left;
     margin: 0 auto;
     max-width: 64em;
 }
@@ -14,7 +17,6 @@ body {
 }
 
 #dokuwiki__header {
-    margin-bottom: 1em;
 }
 #dokuwiki__header .pad {
 }
@@ -25,20 +27,16 @@ body {
         float: right;
         text-align: right;
     }
-    #dokuwiki__header .tools li {
-        display: inline;
-    }
 
-.wrapper {
+#dokuwiki__site .wrapper {
     position: relative;
-    margin-bottom: 1em;
 }
 
     /* show sidebar only in show mode */
     #dokuwiki__aside {
         display: none;
     }
-    .mode_show #dokuwiki__aside{
+    .mode_show #dokuwiki__aside {
         width: 16em;
         float: left;
         position: relative;
@@ -51,11 +49,11 @@ body {
     /* make content wider when there's no sidebar */
     .mode_show #dokuwiki__content {
         float: right;
-        margin: 0 0 0 -16em;
+        margin-left: -16em; /* left negative margin: width of sidebar (#dokuwiki__aside) */
         width: 100%;
     }
     .mode_show #dokuwiki__content .pad {
-        margin-left: 16em;
+        margin-left: 16em; /* left positive margin: width of sidebar (#dokuwiki__aside) */
     }
 
 #dokuwiki__footer {

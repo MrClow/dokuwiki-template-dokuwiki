@@ -1,20 +1,33 @@
+/**
+ * This file provides the main design styles.
+ *
+ * @author Anika Henke <anika@selfthinker.org>
+ * @author Andreas Gohr <andi@splitbrain.org>
+ */
+
 
 /* header
 ********************************************************************/
+
 #dokuwiki__header {
-    margin-bottom: 1em;
+    margin-bottom: 1.5em;
 }
 #dokuwiki__header .headings {
 }
 #dokuwiki__header h1 {
     margin-bottom: 0;
 }
+#dokuwiki__header h1 a {
+    text-decoration: none;
+    color: #00c;
+    background-color: inherit;
+}
 #dokuwiki__header p.claim {
     margin-bottom: 0;
 }
 #dokuwiki__header h2 {
     margin-bottom: 0;
-    font-size: 1em;
+    font-size: 1.125em;
 }
 
 #dokuwiki__header .tools {
@@ -22,7 +35,8 @@
 #dokuwiki__header .tools ul {
     margin-bottom: 1em;
 }
-#dokuwiki__header .tools li {
+#dokuwiki__header .tools ul li {
+    display: inline;
 }
 #dokuwiki__header form.search {
     margin-bottom: .5em;
@@ -35,6 +49,22 @@ form.search #qsearch__in {
 
 #dokuwiki__header div.breadcrumbs {
 }
+
+
+/* nav
+********************************************************************/
+
+#dokuwiki__aside h1 { }
+#dokuwiki__aside h2 { }
+#dokuwiki__aside h3 { }
+#dokuwiki__aside h4 { }
+#dokuwiki__aside h5 { }
+
+#dokuwiki__aside ul,
+#dokuwiki__aside ol {
+    padding-left: 0;
+}
+
 
 /* page tools
 ********************************************************************/
@@ -55,197 +85,127 @@ form.search #qsearch__in {
   color: #fff;
 }
 
-/* --------------------------------------------------
-
-
-div.dokuwiki div.breadcrumbs {
-  background-color: __background_neu__;
-  color: __text_neu__;
-  font-size: 80%;
-  padding: 0 0 0 4px;
-}
-
-div.dokuwiki span.user {
-  color: __text_other__;
-  font-size: 90%;
-}
-
-*/
-
-/* nav
-********************************************************************/
-
-
 /* content
 ********************************************************************/
 
-.dokuwiki .include ul,
-.dokuwiki .include ol {
-    padding-left: 0;
-}
+/*____________ section indenting ____________
+
+.dokuwiki h1 {margin-left: 0;}
+.dokuwiki h2 {margin-left: 20px;}
+.dokuwiki h3 {margin-left: 40px;}
+.dokuwiki h4 {margin-left: 60px;}
+.dokuwiki h5 {margin-left: 80px;}
+.dokuwiki div.level1 {margin-left: 0;}
+.dokuwiki div.level2 {margin-left: 20px;}
+.dokuwiki div.level3 {margin-left: 40px;}
+.dokuwiki div.level4 {margin-left: 60px;}
+.dokuwiki div.level5 {margin-left: 80px;}
+*/
+
+
+/*____________ images ____________*/
+
+/* embedded images (styles are already partly set in lib/styles/style.css) */
+.dokuwiki img.media       { }
+.dokuwiki img.medialeft   { margin: .5em 1.5em .5em 0; }
+.dokuwiki img.mediaright  { margin: .5em 0 .5em 1.5em; }
+.dokuwiki img.mediacenter { margin: .5em auto; }
 
 
 /*____________ tables ____________*/
 
-table.inline {
-/*
-    width: 100%;
-    background-color: #eee;
-    border: 1px solid #ccc;
-*/
+.dokuwiki table.inline {
     min-width: 50%;
 }
-table.inline th,
-table.inline td {
-    border: 1px solid #999;
+.dokuwiki table.inline th,
+.dokuwiki table.inline td {
+    border: 1px solid __text_alt__;
 }
-table.inline th {
-    color: #333;
-    background-color: #ddd;
+.dokuwiki table.inline th {
+    color: inherit;
+    background-color: __background_neu__;
 }
-table.inline td {
+.dokuwiki table.inline td {
 }
-table.inline tr:hover td {
-    background-color: #eee;
+.dokuwiki table.inline tr:hover td {
+    background-color: __background_alt__;
 }
-table.inline tr:hover th {
-    background-color: #ccc;
+.dokuwiki table.inline tr:hover th {
+    background-color: __border__;
 }
 
 
 /*____________ code ____________*/
-pre, tt, code, samp, kbd {
-    background-color: #eee;
+
+.dokuwiki pre,
+.dokuwiki tt,
+.dokuwiki code,
+.dokuwiki samp,
+.dokuwiki kbd {
+    background-color: __background_alt__;
     color: inherit;
 }
-pre {
-    border: 1px solid #ccc;
+.dokuwiki pre {
+    border: 1px solid __border__;
 }
-/*
-  code blocks by code tag
-div.dokuwiki pre.code {
-  background-color: __background_other__;
-}
-  code blocks by file tag
-div.dokuwiki pre.file {
-  background-color: __background_alt__;
+/* for code in <file> */
+.dokuwiki pre.file {
 }
 
-*/
-
-/* filenames for file and code blocks */
-div.dokuwiki dl.file,
-div.dokuwiki dl.code {
-    margin-top: 2em;
-    margin-bottom: 2.5em;
+/* filenames for downloadable file and code blocks */
+.dokuwiki dl.code,
+.dokuwiki dl.file {
 }
 
-div.dokuwiki dl.file dt,
-div.dokuwiki dl.code dt {
-    border: 1px dashed __border__;
-    display: inline;
-    padding: 0.1em 1em;
-    margin-left: 2em;
-}
-
-div.dokuwiki dl.code dt a,
-div.dokuwiki dl.file dt a {
-    color: __text__;
-}
-
-div.dokuwiki dl.code dt {
-    background-color: __background_other__;
-    border-bottom: 1px solid __background_other__;
-}
-
-div.dokuwiki dl.file dt {
+.dokuwiki dl.code dt,
+.dokuwiki dl.file dt {
     background-color: __background_alt__;
-    border-bottom: 1px solid __background_alt__;
-}
-
-/*____________ blockquote ____________
-blockquote {
-    padding-left: 0.7em;
-    padding-right: 0.7em;
-    margin-left: 0.7em;
-    margin-right: 0.7em;
-    font-style: italic;
-    border-left: 0.7em solid #ddd;
-    border-right: 0.7em solid #ddd;
-}
-
-
-div.dokuwiki blockquote {
-  border-left: 2px solid __border__;
-  padding-left: 3px;
-}
-
-*/
-/*____________ forms ____________*/
-/*
-input.button,
-button {
-    border-top: 1px solid #ccc;
-    border-right: 1px solid #666;
-    border-bottom: 1px solid #666;
-    border-left: 1px solid #ccc;
-}
-input.button:hover,
-input.button:focus,
-button:hover,
-button:focus {
-    border-top: 1px solid #666;
-    border-right: 1px solid #ccc;
-    border-bottom: 1px solid #ccc;
-    border-left: 1px solid #666;
-}
-
-
-input.text,
-textarea,
-select {
-    border: 1px solid #666;
-}
-input:focus,
-textarea:focus,
-select:focus {
-    background-color: #eee;
-}
-input.button:focus,
-button:focus,
-a.button:focus {
-    background-color: #666;
-}
-
-option {
-}
-label {
-    display: block;
-}
-input.text {
-}
-input.checkbox {
-}
-label.checkbox {
+    border: solid __border__;
+    border-width: 1px 1px 0;
+    color: inherit;
     display: inline;
+    padding: 0 .5em;
+    margin-left: 1em;
 }
-input.button,
-button {
-    color: #fff !important;
-    background-color: #999;
-    padding: 0.2em 0.4em;
-    font-weight: bold;
+.dokuwiki dl.code dt a,
+.dokuwiki dl.file dt a {
 }
- */
+
+.dokuwiki dl.code dd,
+.dokuwiki dl.file dd {
+    margin: 0;
+}
 
 
-div.license {
+/*____________ misc ____________*/
+
+/* license note in footer and under edit window */
+.dokuwiki div.license {
     font-size: 90%;
+}
+
+
+/*____________ JS popup ____________*/
+
+.JSpopup {
+    background-color: __background_alt__;
+    color: __text__;
+    border: 1px solid __border__;
+    line-height: 1.2;
+}
+
+.JSpopup ul,
+.JSpopup ol {
+    padding-left: 0;
 }
 
 
 /* footer
 ********************************************************************/
+
+.dokuwiki .wrapper {
+    margin-bottom: 3em;
+}
 
 #dokuwiki__footer .doc {
     float: left;
@@ -256,5 +216,4 @@ div.license {
 #dokuwiki__footer .license {
     clear: both;
 }
-
 

@@ -1,9 +1,36 @@
+/* TODO */
+
 /**
- * Layout and dedsign corrections for right-to-left languages
+ * This file provides layout and design corrections for right-to-left
+ * languages.
  *
  * @author Andreas Gohr <andi@splitbrain.org>
  * @author Dotan Kamber <kamberd@yahoo.com>
  */
+
+/*..... new code ........................................................................*/
+
+body,
+caption,
+td,
+th {
+    text-align: right;
+}
+
+ul, ol {
+    padding: 0 1.5em 0 0;
+}
+
+li, dd {
+    margin: 0 1.5em 0 0;
+}
+
+blockquote {
+    border-width: 0 .25em 0 0;
+}
+
+
+/*..... @todo: old code ........................................................................*/
 
 .bar-left {
   float: right;

@@ -1,7 +1,7 @@
-/**************************************************
-This file provides styles for the TOC (table of
-contents) and the sitemap (?do=index).
-**************************************************/
+/**
+ * This file provides styles for the TOC (table of contents), the
+ * sitemap (?do=index) and backlinks (?do=backlink).
+ */
 
 /* toc
 ********************************************************************/
@@ -74,9 +74,12 @@ contents) and the sitemap (?do=index).
 }
 
 
-/* sitemap
+/* sitemap (and backlinkss)
 ********************************************************************/
 
+.dokuwiki ul.idx {
+    padding-left: 0;
+}
 .dokuwiki ul.idx li {
     list-style-image: url(images/bullet.png);
 }
