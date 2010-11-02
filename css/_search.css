@@ -88,6 +88,6 @@
 }
 .dokuwiki form.search div.ajax_qsearch ul li {
     margin: 0;
-    padding: 0 0 0 .2em;
+    padding: 0;
     display: block !important;
 }

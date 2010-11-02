@@ -128,18 +128,13 @@ th {
 a {
 }
 a:link, a:visited {
-    text-decoration: underline;
-}
-a:link {
+    text-decoration: none;
     color: #00c; /* §colour */
-}
-a:visited {
-    color: #606; /* §colour */
 }
 a:link:hover, a:visited:hover,
 a:link:focus, a:visited:focus,
 a:link:active, a:visited:active {
-    text-decoration: none;
+    text-decoration: underline;
 }
 a:link:focus, a:visited:focus {
     outline: 1px dotted;

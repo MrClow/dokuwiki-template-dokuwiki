@@ -49,10 +49,7 @@ div.dokuwiki fieldset {
 
 div.dokuwiki input.edit,
 div.dokuwiki select.edit {
-  color: __text__;
-  background-color: __background__;
   vertical-align: middle;
-  padding: 0.2em 0.3em;
 }
 div.dokuwiki select.edit {
   padding: 0.1em 0;

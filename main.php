@@ -27,7 +27,7 @@ if (!defined('DOKU_INC')) die(); /* must be run from within DokuWiki */
     <?php /* classes mode_<action> are added to make it possible to e.g. style a page differently if it's in edit mode,
          see http://www.dokuwiki.org/devel:action_modes for a list of action modes */ ?>
     <?php /* .dokuwiki should always be in one of the surrounding elements */ ?>
-    <div id="dokuwiki__site"><div class="dokuwiki mode_<?php echo $ACT ?>">
+    <div id="dokuwiki__site"><div class="dokuwiki site mode_<?php echo $ACT ?>">
         <?php html_msgarea() /* occasional error and info messages on top of the page */ ?>
 
         <!-- HEADER -->

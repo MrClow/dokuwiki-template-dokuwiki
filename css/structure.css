@@ -11,7 +11,7 @@ body {
     margin: 0 auto;
     max-width: 64em;
 }
-#dokuwiki__site .dokuwiki {
+#dokuwiki__site .site {
     padding: 1em;
     margin-right: 20px;
 }
@@ -43,7 +43,7 @@ body {
         display: block;
     }
     #dokuwiki__aside .pad {
-        margin: 0 1em 0 0;
+        margin: 0 1.5em 0 0;
     }
 
     /* make content wider when there's no sidebar */
