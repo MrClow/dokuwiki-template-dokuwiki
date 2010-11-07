@@ -27,7 +27,7 @@
 <body>
     <div id="media__manager" class="dokuwiki">
         <?php html_msgarea() ?>
-        <div id="media__left"><div class="pad">
+        <div id="mediamgr__aside"><div class="pad">
             <h1><?php echo hsc($lang['mediaselect'])?></h1>
 
             <?php /* keep the id! additional elements are inserted via JS here */?>
@@ -36,7 +36,7 @@
             <?php tpl_mediaTree() ?>
         </div></div>
 
-        <div id="media__right"><div class="pad">
+        <div id="mediamgr__content"><div class="pad">
             <?php tpl_mediaContent() ?>
         </div></div>
     </div>

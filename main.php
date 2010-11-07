@@ -121,6 +121,7 @@ if (!defined('DOKU_INC')) die(); /* must be run from within DokuWiki */
                         tpl_action('history',1,'li');
                         tpl_action('backlink',1,'li');
                         tpl_action('subscribe',1,'li');
+                        tpl_action('revert',1,'li');
                         tpl_action('top',1,'li');
                     ?>
                 </ul>
@@ -139,7 +140,7 @@ if (!defined('DOKU_INC')) die(); /* must be run from within DokuWiki */
 
     </div></div><!-- /site -->
 
-    <?php //@include(dirname(__FILE__).'/footer.html') /* include hook */ ?>
+    <?php @include(dirname(__FILE__).'/footer.html') /* include hook */ ?>
     <div class="no"><?php tpl_indexerWebBug() /* provide DokuWiki housekeeping, required in all templates */ ?></div>
 </body>
 </html>

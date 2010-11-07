@@ -1,5 +1,6 @@
 /**
- * This file provides the main design styles.
+ * This file provides the main design styles for the
+ * bits that surround the content.
  *
  * @author Anika Henke <anika@selfthinker.org>
  * @author Andreas Gohr <andi@splitbrain.org>
@@ -51,19 +52,44 @@ div.breadcrumbs a {
     background-color: inherit;
 }
 
+/* highlight selected tool */
+.mode_admin a.action.admin,
+.mode_profile a.action.profile,
+.mode_recent a.action.recent,
+.mode_index a.action.index,
+.mode_revisions a.action.revs,
+.mode_backlink a.action.backlink {
+    font-weight: bold;
+}
 
-/* nav
+
+/* sidebar
 ********************************************************************/
 
-#dokuwiki__aside h1 { }
-#dokuwiki__aside h2 { }
-#dokuwiki__aside h3 { }
-#dokuwiki__aside h4 { }
-#dokuwiki__aside h5 { }
+#dokuwiki__aside {
+    padding-top: .4em;
+    line-height: 1.2;
+}
 
-#dokuwiki__aside ul,
-#dokuwiki__aside ol {
+/* make sidebar more condensed */
+
+#dokuwiki__aside h1 { margin-bottom: .222em; }
+#dokuwiki__aside h2 { margin-bottom: .333em; }
+#dokuwiki__aside h3 { margin-bottom: .444em; }
+#dokuwiki__aside h4 { margin-bottom: .5em; }
+#dokuwiki__aside h5 { margin-bottom: .5714em; }
+
+#dokuwiki__aside p, #dokuwiki__aside ul, #dokuwiki__aside ol, #dokuwiki__aside dl,
+#dokuwiki__aside pre, #dokuwiki__aside table, #dokuwiki__aside fieldset,
+#dokuwiki__aside hr, #dokuwiki__aside blockquote, #dokuwiki__aside address {
+    margin-bottom: .7em;
+}
+
+#dokuwiki__aside ul, #dokuwiki__aside ol {
     padding-left: 0;
+}
+#dokuwiki__aside li ul, #dokuwiki__aside li ol {
+    margin-bottom: 0;
 }
 
 
@@ -89,105 +115,12 @@ div.breadcrumbs a {
 /* content
 ********************************************************************/
 
-/*____________ section indenting ____________
-
-.dokuwiki h1 {margin-left: 0;}
-.dokuwiki h2 {margin-left: 20px;}
-.dokuwiki h3 {margin-left: 40px;}
-.dokuwiki h4 {margin-left: 60px;}
-.dokuwiki h5 {margin-left: 80px;}
-.dokuwiki div.level1 {margin-left: 0;}
-.dokuwiki div.level2 {margin-left: 20px;}
-.dokuwiki div.level3 {margin-left: 40px;}
-.dokuwiki div.level4 {margin-left: 60px;}
-.dokuwiki div.level5 {margin-left: 80px;}
-*/
-
-
-/*____________ images ____________*/
-
-/* embedded images (styles are already partly set in lib/styles/style.css) */
-.dokuwiki img.media       { }
-.dokuwiki img.medialeft   { margin: .5em 1.5em .5em 0; }
-.dokuwiki img.mediaright  { margin: .5em 0 .5em 1.5em; }
-.dokuwiki img.mediacenter { margin: .5em auto; }
-
-
-/*____________ tables ____________*/
-
-.dokuwiki table.inline {
-    min-width: 50%;
+.dokuwiki div.page {
 }
-.dokuwiki table.inline th,
-.dokuwiki table.inline td {
-    border: 1px solid __text_alt__;
-}
-.dokuwiki table.inline th {
-    color: inherit;
-    background-color: __background_neu__;
-}
-.dokuwiki table.inline td {
-}
-.dokuwiki table.inline tr:hover td {
-    background-color: __background_alt__;
-}
-.dokuwiki table.inline tr:hover th {
-    background-color: __border__;
-}
-
-
-/*____________ code ____________*/
-
-.dokuwiki pre,
-.dokuwiki tt,
-.dokuwiki code,
-.dokuwiki samp,
-.dokuwiki kbd {
-    background-color: __background_alt__;
-    color: inherit;
-}
-.dokuwiki pre {
-    border: 1px solid __border__;
-}
-/* for code in <file> */
-.dokuwiki pre.file {
-}
-
-/* filenames for downloadable file and code blocks */
-.dokuwiki dl.code,
-.dokuwiki dl.file {
-}
-
-.dokuwiki dl.code dt,
-.dokuwiki dl.file dt {
-    background-color: __background_alt__;
-    border: solid __border__;
-    border-width: 1px 1px 0;
-    color: inherit;
-    display: inline;
-    padding: 0 .5em;
-    margin-left: 1em;
-}
-.dokuwiki dl.code dt a,
-.dokuwiki dl.file dt a {
-}
-
-.dokuwiki dl.code dd,
-.dokuwiki dl.file dd {
-    margin: 0;
-}
-
-
-/*____________ misc ____________*/
 
 /* license note in footer and under edit window */
 .dokuwiki div.license {
     font-size: 90%;
-}
-
-/* any link to current page */
-.dokuwiki span.curid a {
-    color: __text_neu__;
 }
 
 
@@ -198,6 +131,7 @@ div.breadcrumbs a {
     color: __text__;
     border: 1px solid __border__;
     line-height: 1.2;
+    padding: 0 .2em;
 }
 
 .JSpopup ul,
@@ -221,5 +155,9 @@ div.breadcrumbs a {
 }
 #dokuwiki__footer .license {
     clear: both;
+}
+#dokuwiki__footer .license img {
+    margin: 0 .5em 0 0;
+    float: none;
 }
 
