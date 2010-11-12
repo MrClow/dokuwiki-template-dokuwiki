@@ -1,0 +1,66 @@
+/* page tools
+ * ********************************************************************/
+
+#dokuwiki__pagetools {
+    position: absolute;
+    right: -2em;
+    top: 0;
+}
+
+#dokuwiki__pagetools div.anchor {
+    position: fixed;
+}
+
+#dokuwiki__pagetools div.box {
+    position: absolute;
+    right: 0;
+    overflow: hidden;
+    width: 24px;
+    border: 1px solid __border__;
+    background: inherit;
+    text-align: right;
+    padding: 1px;
+}
+
+#dokuwiki__pagetools div.box:hover {
+    width: auto;
+    background: __background_alt__;
+}
+
+#dokuwiki__pagetools ul,
+#dokuwiki__pagetools ul li {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+#dokuwiki__pagetools ul li a {
+    white-space: nowrap;
+    background-repeat: no-repeat;
+    padding-right: 0;
+    padding-left: 25px;
+    background-position: left center;
+}
+
+#dokuwiki__pagetools:hover ul li a {
+    padding-right: 25px;
+    padding-left: 0;
+    background-position: right center;
+}
+
+#dokuwiki__pagetools ul li a.edit {
+    background-image: url(images/pagetools/pencil.png);
+}
+
+#dokuwiki__pagetools ul li a.revs {
+    background-image: url(images/pagetools/time.png);
+}
+
+#dokuwiki__pagetools ul li a.backlink {
+    background-image: url(images/pagetools/arrow_redo.png);
+}
+
+#dokuwiki__pagetools ul li a.top {
+    background-image: url(images/pagetools/arrow_up.png);
+}
+

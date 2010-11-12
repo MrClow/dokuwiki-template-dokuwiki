@@ -7,10 +7,16 @@
 body {
     margin: 0 auto;
 }
+
 #dokuwiki__site {
     margin: 0 auto;
-    max-width: 64em;
+//    max-width: 64em;
+    max-width: 44em;
+
+//debug
+border: 1px #f00 solid;
 }
+
 #dokuwiki__site .site {
     padding: 1em;
     margin-right: 20px;
@@ -18,6 +24,7 @@ body {
 
 #dokuwiki__header {
 }
+
 #dokuwiki__header .pad {
 }
     #dokuwiki__header .headings {

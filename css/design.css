@@ -93,25 +93,6 @@ div.breadcrumbs a {
 }
 
 
-/* page tools
-********************************************************************/
-
-#dokuwiki__pagetools {
-  position: fixed;
-  right: 0;
-  top: 160px;
-  width: 24px;
-  background: #333;
-}
-
-#dokuwiki__pagetools:hover {
-  width: auto;
-}
-
-#dokuwiki__pagetools ul li a {
-  color: #fff;
-}
-
 /* content
 ********************************************************************/
 
