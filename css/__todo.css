@@ -1,0 +1,16 @@
+
+// temporary
+#dokuwiki__header {
+    background: -webkit-gradient(
+        linear,
+        left bottom,
+        left top,
+        color-stop(0.15, rgb(230,227,230)),
+        color-stop(0.7, rgb(194,194,194))
+    );
+    background: -moz-linear-gradient(
+        center bottom,
+        rgb(230,227,230) 15%,
+        rgb(194,194,194) 70%
+    );
+}
