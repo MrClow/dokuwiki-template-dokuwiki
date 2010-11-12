@@ -20,7 +20,6 @@
 }
 #dokuwiki__header h1 a {
     text-decoration: none;
-    color: #00c;
     background-color: inherit;
 }
 #dokuwiki__header h2 {
@@ -128,6 +127,9 @@ div.breadcrumbs a {
     margin-bottom: 2.8em;
 }
 
+#dokuwiki__footer .doc {
+    font-size: 90%;
+}
 #dokuwiki__footer .doc {
     float: left;
 }

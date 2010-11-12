@@ -11,21 +11,20 @@ body {
 #dokuwiki__site {
     margin: 0 auto;
 //    max-width: 64em;
-    max-width: 44em;
+    max-width: 54em;
 
 //debug
 border: 1px #f00 solid;
 }
 
 #dokuwiki__site .site {
-    padding: 1em;
-    margin-right: 20px;
 }
 
 #dokuwiki__header {
 }
 
 #dokuwiki__header .pad {
+    padding: 0.5em 1em;
 }
     #dokuwiki__header .headings {
         float: left;
@@ -37,6 +36,7 @@ border: 1px #f00 solid;
 
 #dokuwiki__site .wrapper {
     position: relative;
+    padding: 0.5em 3em 0.5em 1em;
 }
 
     /* show sidebar only in show mode */

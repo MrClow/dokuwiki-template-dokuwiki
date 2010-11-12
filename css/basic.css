@@ -128,7 +128,7 @@ a {
 }
 a:link, a:visited {
     text-decoration: none;
-    color: #00c; /* §colour */
+    color: #7290b6; /* §colour */
 }
 a:link:hover, a:visited:hover,
 a:link:focus, a:visited:focus,
@@ -168,7 +168,7 @@ acronym, abbr {
     font-style: normal;
 }
 
-pre, code, samp, kbd {
+textarea, pre, code, samp, kbd {
     font: normal 1em Consolas, "Andale Mono WT", "Andale Mono", "Bitstream Vera Sans Mono", "Liberation Mono", Monaco, "Courier New", monospace;
     /* same font stack should be used for ".dokuwiki table.diff td" in _diff.css */
     direction: ltr;
@@ -219,12 +219,15 @@ label {
 }
 input, textarea, button,
 select, optgroup, option {
-    font: inherit;
     color: inherit;
     /* background-color destroys button look */
     line-height: 1;
     margin: 0;
     vertical-align: middle;
+}
+input, button,
+select, optgroup, option {
+    font: inherit;
 }
 input[type=text], input[type=password], textarea {
     padding: .1em;
