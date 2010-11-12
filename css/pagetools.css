@@ -18,7 +18,7 @@
 #dokuwiki__pagetools ul {
     position: absolute;
     right: 0;
-    width: 24px; /* .site margin + border */
+    width: 24px;
     overflow: hidden;
     border: 1px solid __border__;
     text-align: right;
@@ -28,7 +28,8 @@
     color: inherit;
 }
 
-#dokuwiki__pagetools:hover ul {
+#dokuwiki__pagetools:hover ul,
+#dokuwiki__pagetools:focus ul {
     width: auto;
     background-color: __background_alt__;
 }
@@ -38,7 +39,8 @@
     margin: 0;
     list-style: none;
 }
-#dokuwiki__pagetools:hover ul li {
+#dokuwiki__pagetools:hover ul li,
+#dokuwiki__pagetools:focus ul li {
     padding-right: 4px;
 }
 
@@ -46,12 +48,13 @@
     white-space: nowrap;
     background-repeat: no-repeat;
     padding-right: 0;
-    padding-left: 30px;
+    padding-left: 24px;
     background-position: 2px center;
 }
 
-#dokuwiki__pagetools:hover ul li a {
-    padding-right: 30px;
+#dokuwiki__pagetools:hover ul li a,
+#dokuwiki__pagetools:focus ul li a {
+    padding-right: 24px;
     padding-left: 0;
     background-position: right center;
 }
@@ -60,9 +63,17 @@
 #dokuwiki__pagetools ul li a.edit {
     background-image: url(images/pagetools/pencil.png);
 }
-
+#dokuwiki__pagetools ul li a.show {
+    background-image: url(images/pagetools/page.png);
+}
 #dokuwiki__pagetools ul li a.create {
     background-image: url(images/pagetools/pencil_add.png);
+}
+#dokuwiki__pagetools ul li a.draft {
+    background-image: url(images/pagetools/inbox-document-text.png);
+}
+#dokuwiki__pagetools ul li a.source {
+    background-image: url(images/pagetools/page_code.png);
 }
 
 #dokuwiki__pagetools ul li a.revs {
