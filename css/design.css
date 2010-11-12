@@ -45,9 +45,9 @@ form.search #qsearch__in {
     margin-right: .5em;
 }
 
-#dokuwiki__header div.breadcrumbs {
+.dokuwiki div.breadcrumbs {
 }
-div.breadcrumbs a {
+.dokuwiki div.breadcrumbs a {
     color: __existing__;
     background-color: inherit;
 }
