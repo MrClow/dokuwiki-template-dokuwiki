@@ -17,7 +17,7 @@ if (!defined('DOKU_INC')) die(); /* must be run from within DokuWiki */
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title><?php tpl_pagetitle() ?> [<?php echo strip_tags($conf['title']) ?>]</title>
     <?php tpl_metaheaders() ?>
-    <link rel="shortcut icon" href="<?php echo ml('favicon.ico') ?>" />
+    <link rel="shortcut icon" href="<?php echo tpl_getFavicon() ?>" />
     <?php @include(dirname(__FILE__).'/meta.html') /* include hook */ ?>
 </head>
 
