@@ -88,7 +88,7 @@ if (!defined('DOKU_INC')) die(); /* must be run from within DokuWiki */
         </div></div><!-- /header -->
 
 
-        <div class="wrapper" style="position: relative">
+        <div class="wrapper">
             <div id="dokuwiki__aside"><div class="pad include">
                 <?php tpl_include_page('sidebar') /* includes the given wiki page */ ?>
                 <div class="clearer"></div>
@@ -114,20 +114,18 @@ if (!defined('DOKU_INC')) die(); /* must be run from within DokuWiki */
 
             <!-- PAGE ACTIONS -->
             <div id="dokuwiki__pagetools">
-                <div class="anchor">
-                    <div class="box">
-                        <h3 class="a11y">Page Tools</h3> <?php /*TODO: localize*/ ?>
-                        <ul>
-                            <?php
-                                tpl_action('edit',1,'li');
-                                tpl_action('history',1,'li');
-                                tpl_action('backlink',1,'li');
-                                tpl_action('subscribe',1,'li');
-                                tpl_action('revert',1,'li');
-                                tpl_action('top',1,'li');
-                            ?>
-                        </ul>
-                    </div>
+                <h3 class="a11y">Page Tools</h3> <?php /*TODO: localize*/ ?>
+                <div class="tools">
+		    <ul>
+		        <?php
+		            tpl_action('edit',1,'li');
+		            tpl_action('history',1,'li');
+		            tpl_action('backlink',1,'li');
+		            tpl_action('subscribe',1,'li');
+		            tpl_action('revert',1,'li');
+		            tpl_action('top',1,'li');
+		        ?>
+		    </ul>
                 </div>
             </div>
 
