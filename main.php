@@ -77,6 +77,10 @@ if (!defined('DOKU_INC')) die(); /* must be run from within DokuWiki */
             <div class="clearer"></div>
             <hr class="a11y" />
 
+        </div></div><!-- /header -->
+
+
+        <div class="wrapper">
             <!-- BREADCRUMBS -->
             <?php if($conf['breadcrumbs']){ ?>
               <div class="breadcrumbs"><?php tpl_breadcrumbs() ?></div>
@@ -85,10 +89,6 @@ if (!defined('DOKU_INC')) die(); /* must be run from within DokuWiki */
               <div class="breadcrumbs"><?php tpl_youarehere() ?></div>
             <?php } ?>
 
-        </div></div><!-- /header -->
-
-
-        <div class="wrapper">
             <div id="dokuwiki__aside"><div class="pad include">
                 <?php tpl_include_page('sidebar') /* includes the given wiki page */ ?>
                 <div class="clearer"></div>
