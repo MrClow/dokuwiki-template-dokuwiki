@@ -1,0 +1,39 @@
+/* sidebar
+ * ********************************************************************/
+
+#dokuwiki__aside {
+    padding-top: .4em;
+    line-height: 1.2;
+}
+
+/* make sidebar more condensed */
+
+#dokuwiki__aside h1,
+#dokuwiki__aside h2,
+#dokuwiki__aside h3,
+#dokuwiki__aside h4,
+#dokuwiki__aside h5 {
+    text-transform: uppercase;
+    color: __text_neu__;
+}
+
+#dokuwiki__aside h1 { font-size:1.2em; margin-bottom: .4166em; }
+#dokuwiki__aside h2 { font-size:1.1em; margin-bottom: .4545em; }
+#dokuwiki__aside h3 { font-size:1.0em; margin-bottom: .5em; }
+#dokuwiki__aside h4 { font-size:0.9em; margin-bottom: .5555em; }
+#dokuwiki__aside h5 { font-size:0.8em; margin-bottom: .6250em; }
+/* 1 / fontsize /  2 */
+
+#dokuwiki__aside p, #dokuwiki__aside ul, #dokuwiki__aside ol, #dokuwiki__aside dl,
+#dokuwiki__aside pre, #dokuwiki__aside table, #dokuwiki__aside fieldset,
+#dokuwiki__aside hr, #dokuwiki__aside blockquote, #dokuwiki__aside address {
+    margin-bottom: .7em;
+}
+
+#dokuwiki__aside ul, #dokuwiki__aside ol {
+    padding-left: 0;
+}
+#dokuwiki__aside li ul, #dokuwiki__aside li ol {
+    margin-bottom: 0;
+}
+

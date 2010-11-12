@@ -30,7 +30,7 @@ body {
 h1, h2, h3, h4, h5, h6,
 caption, legend {
     font-weight: bold;
-    color: __text_neu__;
+    color: __text__;
     background-color: inherit;
     padding: 0;
     clear: left; /* ideally 'both', but problems with toc */
