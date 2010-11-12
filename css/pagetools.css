@@ -1,14 +1,14 @@
 /* page tools
  * ********************************************************************/
 
-#dokuwiki__site .site {
-    margin-right: 22px;
+#dokuwiki__site .wrapper {
+    padding-right: 30px;
 }
 
 #dokuwiki__pagetools {
     position: absolute;
-    right: -1em; /* .site padding */
-    top: 0;
+    right: 0;
+    top: .5em;
 }
 
 #dokuwiki__pagetools div.tools {
@@ -22,7 +22,7 @@
     overflow: hidden;
     border: 1px solid __border__;
     text-align: right;
-    margin: 0 -1em 0 0;
+    margin: 0;
     padding: 0;
     background-color: __background__;
     color: inherit;

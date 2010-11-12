@@ -8,6 +8,7 @@
 
 /* toc container */
 .dokuwiki div.toc {
+    font-size: 90%;
     float: right;
     margin: 0 0 1.4em 1.4em;
     width: 12em;
