@@ -9,6 +9,7 @@
     position: absolute;
     right: 0;
     top: .5em;
+    font-size: 90%;
 }
 
 #dokuwiki__pagetools div.tools {
@@ -41,7 +42,7 @@
 }
 #dokuwiki__pagetools:hover ul li,
 #dokuwiki__pagetools:focus ul li {
-    padding-right: 4px;
+    padding: 2px 4px;
 }
 
 #dokuwiki__pagetools ul li a {
@@ -82,6 +83,10 @@
 
 #dokuwiki__pagetools ul li a.backlink {
     background-image: url(images/pagetools/arrow_redo.png);
+}
+
+#dokuwiki__pagetools ul li a.subscribe {
+    background-image: url(images/pagetools/email_star.png);
 }
 
 #dokuwiki__pagetools ul li a.top {
