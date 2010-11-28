@@ -59,7 +59,7 @@
 .dokuwiki code,
 .dokuwiki samp,
 .dokuwiki kbd {
-    background-color: __background_alt__;
+    background-color: __background_neu__;
     color: inherit;
 }
 .dokuwiki pre {
@@ -77,9 +77,9 @@
 
 .dokuwiki dl.code dt,
 .dokuwiki dl.file dt {
-    background-color: __background_alt__;
-    border: solid __border__;
-    border-width: 1px 1px 0;
+    background-color: __background_neu__;
+    border: 1px solid __border__;
+    border-bottom: 3px solid __background_neu__;
     color: inherit;
     display: inline;
     padding: 0 .5em;
@@ -87,6 +87,7 @@
 }
 .dokuwiki dl.code dt a,
 .dokuwiki dl.file dt a {
+    font-weight: normal;
 }
 
 .dokuwiki dl.code dd,
