@@ -11,16 +11,16 @@
     font-size: 90%;
     float: right;
     margin: 0 0 1.4em 1.4em;
-    width: 12em;
+    width: 14em;
+    border: 1px solid __border__;
 }
 
 /*____________ toc header ____________*/
 
 .dokuwiki div.tocheader {
-    padding: .2em .5em;
-    margin-bottom: .2em;
+    padding: 0.4em 0.8em;
     font-weight: bold;
-    background-color: __background_alt__;
+    background: __background_alt__ url(images/buttonshadow.png) repeat-x bottom left;
     color: __text__;
 }
 
@@ -48,7 +48,8 @@
 /*____________ toc list ____________*/
 
 .dokuwiki #toc__inside {
-    padding: .2em .5em;
+    font-size: 90%;
+    padding: 1em 1em;
     background-color: __background_alt__;
     color: __text__;
 }
@@ -60,9 +61,11 @@
     list-style: none;
     padding: 0;
     margin: 0;
+    background: transparent url(images/tocdot2.gif) no-repeat 0 0.65em;
+    padding-left: 0.4em;
 }
 .dokuwiki #toc__inside ul ul {
-    padding-left: 1em;
+    padding-left: 0.5em;
 }
 .dokuwiki #toc__inside ul ul li {
 }
