@@ -10,9 +10,7 @@ body {
 
 #dokuwiki__site {
     margin: 0 auto;
-//FIXME    max-width: 64em;
-    max-width: 54em;
-
+    max-width: 64em;
 }
 
 #dokuwiki__site .site {

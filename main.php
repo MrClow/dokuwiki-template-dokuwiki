@@ -27,15 +27,15 @@ if (!defined('DOKU_INC')) die(); /* must be run from within DokuWiki */
     <?php /* classes mode_<action> are added to make it possible to e.g. style a page differently if it's in edit mode,
          see http://www.dokuwiki.org/devel:action_modes for a list of action modes */ ?>
     <?php /* .dokuwiki should always be in one of the surrounding elements */ ?>
-    <div id="dokuwiki__site"><div class="dokuwiki site mode_<?php echo $ACT ?>">
+    <div id="dokuwiki__site"><div id="dokuwiki__top" class="dokuwiki site mode_<?php echo $ACT ?>">
         <?php html_msgarea() /* occasional error and info messages on top of the page */ ?>
 
         <!-- HEADER -->
         <div id="dokuwiki__header"><div class="pad">
 
             <div class="headings">
-                <h1 id="dokuwiki__top"><?php tpl_link(wl(),$conf['title'],'id="dokuwiki__top" accesskey="h" title="[H]"') ?></h1>
-                <h2><?php if (!$conf['useheading']) echo '[[' ?><?php tpl_pagetitle($ID) ?><?php if (!$conf['useheading']) echo ']]' ?></h2>
+                <h1 id="dokuwiki__top"><?php tpl_link(wl(),$conf['title'],' accesskey="h" title="[H]"') ?></h1>
+                <h2><?php if (!$conf['useheading']) echo '[[<span>' ?><?php tpl_pagetitle($ID) ?><?php if (!$conf['useheading']) echo '</span>]]' ?></h2>
 
                 <?php /* TODO: skip links
                 <ul class="a11y">

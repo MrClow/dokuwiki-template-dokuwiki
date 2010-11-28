@@ -1,0 +1,103 @@
+
+/* title and pageid */
+#dokuwiki__header .headings {
+    margin-top: 2.5em;
+}
+#dokuwiki__header h1 {
+    margin-bottom: 0;
+}
+#dokuwiki__header h1 a {
+    text-decoration: none;
+    background-color: inherit;
+    color: __text_neu__;
+}
+#dokuwiki__header h2 {
+    margin-bottom: 0;
+    margin-top: 0.5em;
+    font-size: 0.8em;
+    color: __text_neu__;
+}
+#dokuwiki__header h2 span {
+    margin: 0 0.2em;
+}
+
+/* search */
+#dokuwiki__header form.search {
+    margin-bottom: .5em;
+    display: block;
+}
+form.search #qsearch__in {
+    width: 12em;
+    margin-right: .5em;
+}
+
+/* general tool settings */
+#dokuwiki__header .tools {
+}
+
+#dokuwiki__header .tools ul {
+    margin-bottom: 1em;
+}
+#dokuwiki__header .tools ul li {
+    display: inline;
+}
+
+/* highlight selected tool */
+.mode_admin a.action.admin,
+.mode_profile a.action.profile,
+.mode_recent a.action.recent,
+.mode_index a.action.index,
+.mode_revisions a.action.revs,
+.mode_backlink a.action.backlink,
+.mode_subscribe a.action.subscribe {
+    font-weight: bold;
+}
+
+
+/* site wide tools */
+#dokuwiki__sitetools a {
+    font-size: 0.8em;
+    background-repeat: no-repeat;
+    background-position: left center;
+    padding-left: 19px;
+}
+
+#dokuwiki__sitetools a.recent {
+    background-image: url('images/sitetools/calendar_view_day.png');
+}
+
+#dokuwiki__sitetools a.index {
+    background-image: url('images/sitetools/document-tree.png');
+}
+
+/* user dependent tools */
+#dokuwiki__usertools {
+    margin-bottom: 2.5em;
+}
+
+#dokuwiki__usertools a {
+    font-size: 90%;
+    background-repeat: no-repeat;
+    background-position: left center;
+    padding-left: 19px;
+}
+
+#dokuwiki__usertools a.admin {
+    background-image: url('images/usertools/wrench.png');
+}
+
+#dokuwiki__usertools a.profile {
+    background-image: url('images/usertools/user.png');
+}
+
+#dokuwiki__usertools a.login {
+    background-image: url('images/usertools/door_in.png');
+}
+
+#dokuwiki__usertools a.logout {
+    background-image: url('images/usertools/door_out.png');
+}
+
+
+
+
