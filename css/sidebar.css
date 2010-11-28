@@ -4,6 +4,7 @@
 #dokuwiki__aside {
     padding-top: .4em;
     line-height: 1.2;
+    opacity: 0.8;
 }
 
 /* make sidebar more condensed */
@@ -14,7 +15,6 @@
 #dokuwiki__aside h4,
 #dokuwiki__aside h5 {
     text-transform: uppercase;
-    color: __text_neu__;
 }
 
 #dokuwiki__aside h1 { font-size:1.2em; margin-bottom: .4166em; }

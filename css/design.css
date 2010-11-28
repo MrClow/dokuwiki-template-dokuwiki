@@ -10,6 +10,7 @@
 
 .dokuwiki div.breadcrumbs {
     font-size: 90%;
+    opacity: 0.6;
 }
 .dokuwiki div.breadcrumbs a {
     color: __existing__;
@@ -47,11 +48,6 @@
 
 /* footer
 ********************************************************************/
-
-.dokuwiki .wrapper {
-    margin-top: 1.4em;
-    margin-bottom: 2.8em;
-}
 
 #dokuwiki__footer .doc {
     font-size: 90%;

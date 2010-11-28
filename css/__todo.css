@@ -1,10 +1,22 @@
 body {
 //    background: #3D588F url(http://ickewiki.de/lib/tpl/ickewiki/images/wall4.jpg) no-repeat fixed 50% 50%;
+
+    background: #ededeb url(images/backgroundalpha.png) repeat-x top center;
+    padding-bottom: 5em;
 }
 
 #dokuwiki__site {
-    background-color: rgba(255,255,255,0.5);
-//    opacity: 0.6;
+    background-color: __background__;
+    border: 1px solid __border__;
+    border-top: none;
+
+/*
+    -moz-box-shadow: 3px 3px 4px #ccc;
+    -webkit-box-shadow: 3px 3px 4px #ccc;
+    box-shadow: 3px 3px 4px #ccc;
+*/
+
+//    background-color: rgba(255,255,255,0.5);
 }
 
 

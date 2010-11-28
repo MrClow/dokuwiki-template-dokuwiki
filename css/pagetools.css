@@ -1,13 +1,9 @@
 /* page tools
  * ********************************************************************/
 
-#dokuwiki__site .wrapper {
-    padding-right: 30px;
-}
-
 #dokuwiki__pagetools {
     position: absolute;
-    right: 0;
+    right: 1.25em;
     top: .5em;
     font-size: 90%;
 }

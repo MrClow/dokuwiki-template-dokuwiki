@@ -48,7 +48,7 @@ if (!defined('DOKU_INC')) die(); /* must be run from within DokuWiki */
             </div>
 
             <div class="tools">
-                <!-- AUTH ACTIONS -->
+                <!-- User Tools -->
                 <div id="dokuwiki__usertools">
                     <h3 class="a11y">User Tools</h3> <?php /*TODO: localize*/ ?>
                     <ul>
@@ -60,7 +60,7 @@ if (!defined('DOKU_INC')) die(); /* must be run from within DokuWiki */
                     </ul>
                 </div>
 
-                <!-- SITE ACTIONS -->
+                <!-- Site Tools -->
                 <div id="dokuwiki__sitetools">
                     <h3 class="a11y">Site Tools</h3> <?php /*TODO: localize*/ ?>
                     <?php tpl_searchform(); ?>
