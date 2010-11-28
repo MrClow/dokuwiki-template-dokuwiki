@@ -87,6 +87,8 @@ if (!defined('DOKU_INC')) die(); /* must be run from within DokuWiki */
             <div class="breadcrumbs"><?php tpl_youarehere() ?></div>
         <?php } ?>
 
+        <?php tpl_flush() /* flush the output buffer */ ?>
+
         <div class="wrapper">
             <div id="dokuwiki__aside"><div class="pad include">
                 <?php tpl_include_page('sidebar') /* includes the given wiki page */ ?>
@@ -94,7 +96,6 @@ if (!defined('DOKU_INC')) die(); /* must be run from within DokuWiki */
             </div></div><!-- /sidebar -->
 
             <div id="dokuwiki__content"><div class="pad">
-                <?php tpl_flush() /* flush the output buffer */ ?>
                 <?php @include(dirname(__FILE__).'/pageheader.html') /* include hook */ ?>
 
                 <div class="page">
@@ -115,16 +116,16 @@ if (!defined('DOKU_INC')) die(); /* must be run from within DokuWiki */
             <div id="dokuwiki__pagetools">
                 <h3 class="a11y">Page Tools</h3> <?php /*TODO: localize*/ ?>
                 <div class="tools">
-		    <ul>
-		        <?php
-		            tpl_action('edit',1,'li');
-		            tpl_action('history',1,'li');
-		            tpl_action('backlink',1,'li');
-		            tpl_action('subscribe',1,'li');
-		            tpl_action('revert',1,'li');
-		            tpl_action('top',1,'li');
-		        ?>
-		    </ul>
+            <ul>
+                <?php
+                    tpl_action('edit',1,'li');
+                    tpl_action('history',1,'li');
+                    tpl_action('backlink',1,'li');
+                    tpl_action('subscribe',1,'li');
+                    tpl_action('revert',1,'li');
+                    tpl_action('top',1,'li');
+                ?>
+            </ul>
                 </div>
             </div>
 

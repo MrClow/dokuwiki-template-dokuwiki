@@ -128,7 +128,7 @@ a {
 }
 a:link, a:visited {
     text-decoration: none;
-    color: #0046ad; /* §colour */
+    color: __links__; /* §colour */
 }
 a:link:hover, a:visited:hover,
 a:link:focus, a:visited:focus,
