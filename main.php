@@ -34,7 +34,7 @@ if (!defined('DOKU_INC')) die(); /* must be run from within DokuWiki */
         <div id="dokuwiki__header"><div class="pad">
 
             <div class="headings">
-                <h1 id="dokuwiki__top"><?php tpl_link(wl(),$conf['title'],' accesskey="h" title="[H]"') ?></h1>
+                <h1><?php tpl_link(wl(),$conf['title'],' accesskey="h" title="[H]"') ?></h1>
                 <h2><?php if (!$conf['useheading']) echo '[[<span>' ?><?php tpl_pagetitle($ID) ?><?php if (!$conf['useheading']) echo '</span>]]' ?></h2>
 
                 <?php /* TODO: skip links
